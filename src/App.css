@@ -16,8 +16,8 @@
 }
 
 .header-bullet {
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background: #a7a9be;
   align-self: center;
@@ -35,18 +35,21 @@
 }
 
 .add-new-task-btn {
-  height: 40px;
-  width: 125px;
-  background: #a7a9be;
+  min-height: 44px;
+  min-width: 10ch;
+  padding: 0.25em 0.75em;
+  background-color: #a7a9be;
   color: #fff;
   border: none;
   border-radius: 4px;
-  padding: 2px 4px;
   align-self: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .add-new-task-btn img {
-  margin: 0 2px;
+  margin-right: 0.5em;
 }
 
 .header-bottom {
@@ -60,11 +63,19 @@
   justify-content: space-between;
 }
 
-.header-bottom ul li {
+.tab {
   color: #fff;
   font-size: 1em;
   font-weight: bold;
-  border-bottom: 2px solid #a7a9be;
-  border-radius: 2px;
-  padding: 4px 0;
+  display: block;
+}
+
+.tab p {
+  margin: 4px 0;
+}
+
+.tab .active {
+  height: 2px;
+  background: #a7a9be;
+  border-radius: 4px;
 }

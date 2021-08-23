@@ -21,8 +21,18 @@ function App() {
         </div>
         <div className='header-bottom'>
           <ul>
-            <li>Tasks</li>
-            <li>Completed Tasks</li>
+            <li>
+              <div className='tab'>
+                <p>Tasks</p>
+                <div className='active' />
+              </div>
+            </li>
+            <li>
+              <div className='tab'>
+                <p>Completed Tasks</p>
+                <div className='active' />
+              </div>
+            </li>
           </ul>
         </div>
       </div>
