@@ -1,7 +1,7 @@
 .app {
   background: #0f0e17;
-  height: 100vh;
-  padding: 2rem 2rem;
+  min-height: 100vh;
+  padding: 2em 2em;
 }
 
 .header-top {
@@ -11,13 +11,11 @@
 
 .header-top-left {
   display: flex;
-  justify-content: space-between;
-  width: 13.5rem;
 }
 
 .header-bullet {
-  width: 24px;
-  height: 24px;
+  width: 1.56em;
+  height: 1.56em;
   border-radius: 50%;
   background: #a7a9be;
   align-self: center;
@@ -25,27 +23,28 @@
 
 .date-container {
   display: flex;
+  margin-left: 1em;
 }
 
 .date {
-  color: #fff;
-  margin-right: 0.5rem;
-  font-size: 1.2em;
+  color: var(--off-white);
+  margin-right: 0.5em;
   font-weight: bold;
 }
 
 .add-new-task-btn {
   min-height: 44px;
   min-width: 10ch;
-  padding: 0.25em 0.75em;
+  padding: 0em 0.75em;
   background-color: #a7a9be;
   color: #fff;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   align-self: center;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .add-new-task-btn img {
@@ -59,23 +58,61 @@
 .header-bottom ul {
   display: flex;
   list-style: none;
-  width: 20rem;
+  width: 20em;
   justify-content: space-between;
+  margin: 0;
 }
 
 .tab {
-  color: #fff;
-  font-size: 1em;
-  font-weight: bold;
+  color: var(--off-white);
   display: block;
+  cursor: pointer;
 }
 
-.tab p {
-  margin: 4px 0;
+.tab label {
+  margin: 0.16em 0;
+  font-weight: 600;
+  font-size: var(--h2);
+  cursor: pointer;
 }
 
-.tab .active {
-  height: 2px;
+.tab input[type='radio'] {
+  position: absolute;
+  top: 0;
+  left: -9999rem;
+}
+
+input[name='tabs']:checked ~ .active {
+  height: 0.13em;
   background: #a7a9be;
   border-radius: 4px;
+}
+
+.pages {
+  min-height: 30em;
+}
+
+.no-task-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.no-task-page p {
+  color: var(--off-white);
+}
+
+.create-new-task-btn {
+  min-height: 44px;
+  min-width: 10ch;
+  padding: 0em 0.75em;
+  background-color: #a7a9be;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }

@@ -1,40 +1,28 @@
 import './App.css';
-import calenderIcon from './assets/calender.svg';
-import plusIcon from './assets/plus.svg';
+import Header from './components/Header';
+import NoTask from './views/NoTask';
+import Tasks from './views/Tasks';
+import CompletedTasks from './views/CompletedTasks';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className='app'>
-      <div className='header'>
-        <div className='header-top'>
-          <div className='header-top-left'>
-            <span className='header-bullet' />
-            <div className='date-container'>
-              <p className='date'>August 21, 2021</p>
-              <img src={calenderIcon} alt='calender icon' />
-            </div>
-          </div>
-          <button className='add-new-task-btn'>
-            <img src={plusIcon} alt='plus icon' />
-            add new task
-          </button>
-        </div>
-        <div className='header-bottom'>
-          <ul>
-            <li>
-              <div className='tab'>
-                <p>Tasks</p>
-                <div className='active' />
-              </div>
-            </li>
-            <li>
-              <div className='tab'>
-                <p>Completed Tasks</p>
-                <div className='active' />
-              </div>
-            </li>
-          </ul>
-        </div>
+      <Header />
+      <div className='pages'>
+        <BrowserRouter>
+          <Switch>
+            <Route exact path='/'>
+              <NoTask />
+            </Route>
+            <Route path='/tasks'>
+              <Tasks />
+            </Route>
+            <Route path='/completed-tasks'>
+              <CompletedTasks />
+            </Route>
+          </Switch>
+        </BrowserRouter>
       </div>
     </div>
   );
