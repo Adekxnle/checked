@@ -1,9 +1,9 @@
-import React from 'react';
+import NoTask from './NoTask';
 
 function Tasks() {
   return (
     <div>
-      <p>Tasks</p>
+      <NoTask />
     </div>
   );
 }

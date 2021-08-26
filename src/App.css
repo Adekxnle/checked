@@ -69,24 +69,27 @@
   cursor: pointer;
 }
 
-.tab label {
-  margin: 0.16em 0;
-  font-weight: 600;
-  font-size: var(--h2);
-  cursor: pointer;
+.tab h2 {
+  margin: 0.11em 0;
+  font-weight: 500;
 }
 
-.tab input[type='radio'] {
-  position: absolute;
-  top: 0;
-  left: -9999rem;
+li .tabs {
+  text-decoration: none;
+  color: transparent;
 }
 
-input[name='tabs']:checked ~ .active {
+.tabs .active {
   height: 0.13em;
   background: #a7a9be;
   border-radius: 4px;
 }
+
+/* .tabs:focus ~ .active {
+  height: 0.13em;
+  background: #a7a9be;
+  border-radius: 4px;
+} */
 
 .pages {
   min-height: 30em;

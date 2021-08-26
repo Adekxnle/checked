@@ -1,5 +1,6 @@
 import calenderIcon from '../assets/calender.svg';
 import plusIcon from '../assets/plus.svg';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   return (
@@ -20,22 +21,20 @@ export default function Header() {
       <div className='header-bottom'>
         <ul>
           <li>
-            <div className='tab'>
-              <input name='tabs' id='tasks' type='radio' defaultChecked />
-              <label htmlFor='tasks' arialselected='true'>
-                Tasks
-              </label>
-              <div className='active' />
-            </div>
+            <Link className='tabs' to='/'>
+              <div className='tab'>
+                <h2>Tasks</h2>
+                <div className='active' />
+              </div>
+            </Link>
           </li>
           <li>
-            <div className='tab'>
-              <input name='tabs' id='completed-tasks' type='radio' />
-              <label htmlFor='completed-tasks' arialselected='fasle'>
-                Completed Tasks
-              </label>
-              <div className='active' />
-            </div>
+            <Link className='tabs' to='/completed-tasks'>
+              <div className='tab'>
+                <h2>Completed Tasks</h2>
+                <div className='active' />
+              </div>
+            </Link>
           </li>
         </ul>
       </div>
