@@ -32,7 +32,7 @@ export default function Header() {
             <Link className='tabs' to='/completed-tasks'>
               <div className='tab'>
                 <h2>Completed Tasks</h2>
-                <div className='active' />
+                {/* <div className='active' /> */}
               </div>
             </Link>
           </li>

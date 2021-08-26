@@ -33,18 +33,7 @@
 }
 
 .add-new-task-btn {
-  min-height: 44px;
-  min-width: 10ch;
-  padding: 0em 0.75em;
-  background-color: #a7a9be;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
   align-self: center;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
 }
 
 .add-new-task-btn img {
@@ -70,7 +59,8 @@
 }
 
 .tab h2 {
-  margin: 0.11em 0;
+  color: var(--off-white);
+  margin: 0.1rem 0;
   font-weight: 500;
 }
 
@@ -104,18 +94,5 @@ li .tabs {
 
 .no-task-page p {
   color: var(--off-white);
-}
-
-.create-new-task-btn {
-  min-height: 44px;
-  min-width: 10ch;
-  padding: 0em 0.75em;
-  background-color: #a7a9be;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  font-weight: 400;
 }
