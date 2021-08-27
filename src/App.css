@@ -96,3 +96,12 @@ li .tabs {
   color: var(--off-white);
   font-weight: 400;
 }
+
+.completed-task-page {
+  text-align: center;
+}
+
+.completed-task-page p {
+  color: var(--off-white);
+  font-weight: 400;
+}

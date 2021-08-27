@@ -1,6 +1,6 @@
 function CompletedTasks() {
   return (
-    <div>
+    <div className='completed-task-page'>
       <p>Completed Tasks</p>
     </div>
   );
