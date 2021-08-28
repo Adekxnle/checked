@@ -21,20 +21,26 @@ export default function Header() {
       <div className='header-bottom'>
         <ul>
           <li>
-            <Link className='tabs' to='/'>
-              <div className='tab'>
-                <h2>Tasks</h2>
-                <div className='active' />
-              </div>
-            </Link>
+            <div className='tab'>
+              <input type='radio' name='tab' id='task-tab' defaultChecked />
+              <label htmlFor='task-tab' ariaselected='true'>
+                <Link className='tabs' to='/'>
+                  Tasks
+                </Link>
+              </label>
+              <div className='active' />
+            </div>
           </li>
           <li>
-            <Link className='tabs' to='/completed-tasks'>
-              <div className='tab'>
-                <h2>Completed Tasks</h2>
-                {/* <div className='active' /> */}
-              </div>
-            </Link>
+            <div className='tab'>
+              <input type='radio' name='tab' id='completed-task-tab' />
+              <label htmlFor='completed-task-tab' ariaselected='false'>
+                <Link className='tabs' to='/completed-tasks'>
+                  Completed Tasks
+                </Link>
+              </label>
+              <div className='active' />
+            </div>
           </li>
         </ul>
       </div>

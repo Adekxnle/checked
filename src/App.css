@@ -53,33 +53,29 @@
 }
 
 .tab {
-  color: var(--off-white);
   display: block;
   cursor: pointer;
 }
 
-.tab h2 {
+li a.tabs {
   color: var(--off-white);
   margin: 0.1rem 0;
   font-weight: 600;
-}
-
-li .tabs {
   text-decoration: none;
-  color: transparent;
+  font-size: var(--h2);
 }
 
-.tabs .active {
-  height: 0.13em;
-  background: #a7a9be;
-  border-radius: 4px;
+.tab input[name='tab'] {
+  position: absolute;
+  top: 0;
+  left: -9999px;
 }
 
-/* .tabs:focus ~ .active {
+.tab input[name='tab']:checked ~ .active {
   height: 0.13em;
-  background: #a7a9be;
+  background-color: #a7a9be;
   border-radius: 4px;
-} */
+}
 
 .pages {
   min-height: 30em;
