@@ -54,10 +54,9 @@
 
 .tab {
   display: block;
-  cursor: pointer;
 }
 
-li a.tabs {
+li .tab h2 {
   color: var(--off-white);
   margin: 0.1rem 0;
   font-weight: 600;
@@ -65,13 +64,11 @@ li a.tabs {
   font-size: var(--h2);
 }
 
-.tab input[name='tab'] {
-  position: absolute;
-  top: 0;
-  left: -9999px;
+li .tabs {
+  text-decoration: none;
 }
 
-.tab input[name='tab']:checked ~ .active {
+.tab .active {
   height: 0.13em;
   background-color: #a7a9be;
   border-radius: 4px;
