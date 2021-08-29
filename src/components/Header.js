@@ -1,8 +1,10 @@
 import calenderIcon from '../assets/calender.svg';
 import plusIcon from '../assets/plus.svg';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
-export default function Header() {
+function Header() {
+  let location = useLocation();
+
   return (
     <div className='header'>
       <div className='header-top'>
@@ -24,7 +26,7 @@ export default function Header() {
             <Link className='tabs' to='/'>
               <div className='tab'>
                 <h2> Tasks </h2>
-                <div className='active' />
+                {location.pathname === '/' ? <div className='active' /> : ''}
               </div>
             </Link>
           </li>
@@ -32,7 +34,7 @@ export default function Header() {
             <Link className='tabs' to='/completed-tasks'>
               <div className='tab'>
                 <h2>Completed Tasks</h2>
-                <div className='active' />
+                {location.pathname === '/completed-tasks' ? <div className='active' /> : ''}
               </div>
             </Link>
           </li>
@@ -41,3 +43,5 @@ export default function Header() {
     </div>
   );
 }
+
+export default Header;
