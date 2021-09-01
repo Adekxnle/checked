@@ -1,3 +1,4 @@
+import './Tasks.css';
 //import NoTask from './NoTask';
 
 function Tasks() {

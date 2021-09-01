@@ -1,3 +1,4 @@
+import './NoTask.css';
 import illustration from '../assets/illustration.svg';
 
 function NoTask() {

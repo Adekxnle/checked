@@ -1,3 +1,5 @@
+import './CompletedTasks.css';
+
 function CompletedTasks() {
   return (
     <div className='completed-task-page'>
