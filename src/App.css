@@ -78,6 +78,8 @@ li .tabs {
   min-height: 30em;
 }
 
+/* stylesheet for no-task page*/
+
 .no-task-page {
   display: flex;
   flex-direction: column;
@@ -90,18 +92,76 @@ li .tabs {
   font-weight: 400;
 }
 
+/* stylesheet for task page*/
+
 .tasks-page {
   padding-top: 4em;
 }
 
-.task-container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  color: var(--off-white);
+.tasks-page ol {
+  margin: 0;
+  padding: 0;
 }
 
-.task-container .task {
+ol li.task-container {
+  display: flex;
+  position: relative;
+  gap: 1rem;
+  padding-bottom: 4rem;
+}
+
+.task-container:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: calc(1.5em + 0.84375em);
+  left: 0;
+  width: 0.08em;
+  height: calc(100% - 1.5em);
+  background-color: #e6e6e6;
+  transform: translateX(calc(calc(1.5em + 0.08em) / 2));
+}
+
+.checkbox-input {
+  display: grid;
+  grid-template-areas: 'checkbox';
+  align-items: center;
+  justify-items: center;
+}
+
+.checkbox-input * {
+  grid-area: checkbox;
+}
+
+.checkbox-input input {
+  opacity: 0;
+  width: 1.5em;
+  height: 1.5em;
+}
+
+.checkbox-input .checkbox-control {
+  display: inline-grid;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  border: 0.1em solid var(--off-white);
+  z-index: 1;
+}
+
+.checkbox-control svg {
+  transition: transform 0.1s ease-in 25ms;
+  transform: scale(0);
+  transform-origin: bottom left;
+}
+
+.checkbox-input input:checked + .checkbox-control svg {
+  transform: scale(1);
+}
+
+.checkbox-input input:checked + .checkbox-control {
+  border: 0.1em solid #2e7d32;
+}
+
+label .task {
   min-height: 50px;
   min-width: 40ch;
   margin-left: 1.3em;
@@ -109,6 +169,7 @@ li .tabs {
   display: flex;
   border-radius: 8px;
   cursor: pointer;
+  color: var(--off-white);
 }
 
 .task .indicator {
@@ -122,6 +183,8 @@ li .tabs {
 .task p {
   margin-left: 1em;
 }
+
+/* stylesheet for completed page*/
 
 .completed-task-page {
   text-align: center;
