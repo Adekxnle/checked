@@ -94,6 +94,14 @@ label .task {
   border-bottom-left-radius: 8px;
 }
 
+.task-container:nth-child(2) label .task .indicator {
+  background-color: #ff8906;
+}
+
+.task-container:nth-child(3) label .task .indicator {
+  background-color: #f25f4c;
+}
+
 .task p {
   margin-left: 1em;
 }
