@@ -59,7 +59,7 @@ function Tasks() {
         </li>
         <li className='task-container'>
           <span className='checkbox-input'>
-            <input type='checkbox' name='checked' id='task-2' />
+            <input type='checkbox' name='checked' id='task-3' />
             <span className='checkbox-control'>
               <svg
                 width='18'
@@ -76,7 +76,7 @@ function Tasks() {
               </svg>
             </span>
           </span>
-          <label htmlFor='task-2'>
+          <label htmlFor='task-3'>
             <div className='task'>
               <div className='indicator' />
               <p>Finish the damn project!!</p>
