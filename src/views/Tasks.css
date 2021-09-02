@@ -57,7 +57,7 @@ ol li.task-container {
   width: var(--task-bullet);
   height: var(--task-bullet);
   border-radius: 50%;
-  border: 0.1em solid var(--off-white);
+  border: 0.125em solid var(--off-white);
   z-index: 1;
 }
 
@@ -72,7 +72,7 @@ ol li.task-container {
 }
 
 .checkbox-input input:checked + .checkbox-control {
-  border: 0.1em solid #2e7d32;
+  border: 0.125em solid #2e7d32;
 }
 
 label .task {
