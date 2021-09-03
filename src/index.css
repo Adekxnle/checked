@@ -45,6 +45,7 @@ button {
   min-width: 10ch;
   padding: 0em 0.75em;
   background-color: #a7a9be;
+  background-position: center;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -52,4 +53,15 @@ button {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: background 0.8s;
+}
+
+button:hover {
+  background: #b0b2c5 radial-gradient(circle, transparent 1%, #b0b2c5 1%) center/15000%;
+}
+
+button:active {
+  background-color: #cacbd8;
+  background-size: 100%;
+  transition: background 0s;
 }
