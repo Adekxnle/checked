@@ -2,6 +2,7 @@ import './App.css';
 import Header from './components/Header';
 import Tasks from './views/Tasks';
 import CompletedTasks from './views/CompletedTasks';
+import NewTask from './views/NewTask';
 import { Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
           </Route>
           <Route path='/completed-tasks'>
             <CompletedTasks />
+          </Route>
+          <Route path='/new-task'>
+            <NewTask />
           </Route>
         </Switch>
       </div>
