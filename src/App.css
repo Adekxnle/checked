@@ -23,6 +23,7 @@
   border-radius: 50%;
   background: #a7a9be;
   align-self: center;
+  cursor: pointer;
 }
 
 .date-container {
