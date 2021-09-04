@@ -6,78 +6,7 @@
   background: #0f0e17;
   min-height: 100vh;
   padding: 2em 2em;
-}
-
-.header-top {
-  display: flex;
-  justify-content: space-between;
-}
-
-.header-top-left {
-  display: flex;
-}
-
-.header-bullet {
-  width: var(--header-bullet);
-  height: var(--header-bullet);
-  border-radius: 50%;
-  background: #a7a9be;
-  align-self: center;
-  cursor: pointer;
-}
-
-.date-container {
-  display: flex;
-  margin-left: 1em;
-}
-
-.date {
-  color: var(--off-white);
-  margin-right: 0.5em;
-  font-weight: bold;
-}
-
-.add-new-task-btn {
-  align-self: center;
-}
-
-.add-new-task-btn img {
-  margin-right: 0.5em;
-}
-
-.header-bottom {
-  margin-top: 2rem;
-}
-
-.header-bottom ul {
-  display: grid;
-  grid-template-columns: min-content max-content;
-  grid-gap: 4rem;
-  align-items: start;
-  list-style: none;
-  margin: 0;
-}
-
-.tab {
-  display: block;
-}
-
-li .tab h2 {
-  color: var(--off-white);
-  margin: 0.12em 0;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: var(--h2);
-}
-
-li .tabs {
-  text-decoration: none;
-}
-
-.tab .active {
-  height: 0.16em;
-  background-color: #a7a9be;
-  border-radius: 4px;
+  position: relative;
 }
 
 .pages {
