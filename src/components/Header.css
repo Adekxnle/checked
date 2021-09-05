@@ -11,14 +11,14 @@
   width: var(--header-bullet);
   height: var(--header-bullet);
   border-radius: 50%;
-  background: #a7a9be;
+  background: var(--primary);
   align-self: center;
   cursor: pointer;
 }
 
 .date-container {
   display: flex;
-  margin-left: 1em;
+  margin-left: 1rem;
 }
 
 .date {
@@ -66,6 +66,6 @@ li .tabs {
 
 .tab .active {
   height: 0.16em;
-  background-color: #a7a9be;
+  background-color: var(--primary);
   border-radius: 4px;
 }

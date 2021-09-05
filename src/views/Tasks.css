@@ -79,7 +79,7 @@ label .task {
   min-height: var(--task-min-height);
   min-width: 40ch;
   margin-left: 1.3em;
-  background-color: #0c0b12;
+  background-color: var(--tertiary);
   display: flex;
   border-radius: 8px;
   cursor: pointer;

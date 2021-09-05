@@ -17,11 +17,9 @@ function App() {
           <Route path='/completed-tasks'>
             <CompletedTasks />
           </Route>
-          <Route path='/new-task'>
-            <NewTask />
-          </Route>
         </Switch>
       </div>
+      <NewTask />
     </div>
   );
 }

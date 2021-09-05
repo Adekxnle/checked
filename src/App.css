@@ -3,10 +3,9 @@
 }
 
 .app {
-  background: #0f0e17;
-  min-height: 100vh;
+  background: var(--secondary);
+  height: 100vh;
   padding: 2em 2em;
-  position: relative;
 }
 
 .pages {
