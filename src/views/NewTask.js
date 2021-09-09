@@ -15,7 +15,6 @@ function NewTask() {
           <span>finished</span>
         </button>
       </div>
-
       <div className='new-task-page-content'>
         <div className='input-title'>
           <label htmlFor='title'>Title</label>
@@ -23,6 +22,7 @@ function NewTask() {
         </div>
         <div className='color-badge'>
           <p>Color badge</p>
+          <div className='colors'></div>
         </div>
       </div>
     </div>

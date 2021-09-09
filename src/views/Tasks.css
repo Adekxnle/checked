@@ -4,7 +4,7 @@
   --task-min-height: 3.13em;
 
   --stepper-line-position: calc(
-    var(--task-bullet) + calc(calc(var(--task-min-height) - var(--task-bullet) + 0.05em) / 2)
+    var(--task-bullet) + calc(calc(var(--task-min-height) - var(--task-bullet)) / 2)
   );
 }
 

@@ -39,6 +39,41 @@
   margin-right: 0.5em;
 }
 
-/* .new-task-page-content{
-  
-} */
+.new-task-page-content {
+  padding: 3em 0;
+}
+
+.input-title {
+  display: grid;
+  grid-template-rows: min-content max-content;
+  grid-gap: 1.5rem;
+  align-items: start;
+}
+
+.input-title label {
+  color: var(--off-white);
+  font-size: var(--font-size);
+  font-weight: 500;
+}
+
+.input-title input[id='title'] {
+  width: 28rem;
+  min-height: 2.8rem;
+  background: none;
+  border: 1.8px solid var(--off-white);
+  border-radius: 8px;
+  outline: none;
+  color: var(--off-white);
+  font-size: var(--font-size);
+  padding: 0.25em 0.5em;
+}
+
+.color-badge {
+  margin-top: 2rem;
+}
+
+.color-badge p {
+  color: var(--off-white);
+  font-size: var(--font-size);
+  font-weight: 500;
+}
