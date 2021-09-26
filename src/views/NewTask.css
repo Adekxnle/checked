@@ -30,12 +30,12 @@
   font-weight: bold;
 }
 
-.finished-btn {
+.btn-finished {
   align-self: center;
   min-width: 15ch;
 }
 
-.finished-btn img {
+.btn-finished img {
   margin-right: 0.5em;
 }
 

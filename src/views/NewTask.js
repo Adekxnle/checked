@@ -1,6 +1,6 @@
 import './NewTask.css';
 import NavIcon from '../assets/navigation-back.svg';
-import Checked from '../assets/checked.svg';
+import Checked from '../assets/checked-white.svg';
 
 function NewTask() {
   return (
@@ -10,8 +10,8 @@ function NewTask() {
           <img src={NavIcon} alt='navigation icon' />
           <h1>New task</h1>
         </div>
-        <button className='finished-btn'>
-          <img src={Checked} alt='plus icon' />
+        <button className='btn-finished'>
+          <img src={Checked} alt='checked icon' />
           <span>finished</span>
         </button>
       </div>
