@@ -60,12 +60,19 @@
   width: 28rem;
   min-height: 2.8rem;
   background: none;
-  border: 1.8px solid var(--off-white);
+  border: 2px solid var(--off-white);
   border-radius: 8px;
   outline: none;
   color: var(--off-white);
   font-size: var(--font-size);
   padding: 0.25em 0.5em;
+  transition: 180ms box-shadow ease-in-out;
+}
+
+input[id='title']:focus {
+  border-color: hsl(234.8, 15%, 70%);
+  box-shadow: 0 0 0 2px hsla(234.8, 15%, calc(70% + 20%), 0.8);
+  outline: 2px solid transparent;
 }
 
 .color-badge {
