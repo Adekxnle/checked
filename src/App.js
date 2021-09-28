@@ -2,7 +2,7 @@ import './App.css';
 import Header from './components/Header';
 import Tasks from './views/Tasks';
 import CompletedTasks from './views/CompletedTasks';
-import NewTask from './views/NewTask';
+//import NewTask from './views/NewTask';
 import { Switch, Route } from 'react-router-dom';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
           </Route>
         </Switch>
       </div>
-      <NewTask />
+      {/* <NewTask /> */}
     </div>
   );
 }

@@ -117,8 +117,6 @@ input[id='title']:focus {
   width: 2em;
   height: 2em;
   border-radius: 8px;
-  background-color: #ff8906;
-  /* transition: 180ms box-shadow ease-in-out; */
 }
 
 .badge-control svg {
@@ -130,8 +128,3 @@ input[id='title']:focus {
 .badge-input input:checked + .badge-control svg {
   transform: scale(1);
 }
-
-/* .badge-input input:focus + .badge-control {
- box-shadow: 0 0 0 2px hsla(234.8, 15%, calc(70% + 20%), 0.8);
- outline: 2px solid transparent; 
-} */
