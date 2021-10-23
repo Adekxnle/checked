@@ -7,7 +7,7 @@ function Tasks() {
     // <NoTask />
     <div className='tasks-page'>
       <ol>
-        <Task id='task' title='fuck!!' />
+        <Task id='task' title='Wash the dishes before 4pm' />
       </ol>
     </div>
   );
