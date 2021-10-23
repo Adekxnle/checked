@@ -1,5 +1,5 @@
-import './NoTask.css';
-import illustration from '../assets/illustration.svg';
+import './style.css';
+import illustration from '../../assets/illustration.svg';
 
 function NoTask() {
   return (

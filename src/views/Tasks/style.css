@@ -1,0 +1,18 @@
+:root {
+  /*sizes for task container and check boxes*/
+  --task-bullet: 1.5em;
+  --task-min-height: 3.13em;
+
+  --stepper-line-position: calc(
+    var(--task-bullet) + calc(calc(var(--task-min-height) - var(--task-bullet)) / 2)
+  );
+}
+
+.tasks-page {
+  padding-top: 4em;
+}
+
+.tasks-page ol {
+  margin: 0;
+  padding: 0;
+}

@@ -60,7 +60,7 @@
   width: 28rem;
   min-height: 2.8rem;
   background: none;
-  border: 2px solid var(--off-white);
+  border: 1.5px solid var(--off-white);
   border-radius: 8px;
   outline: none;
   color: var(--off-white);

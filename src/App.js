@@ -1,8 +1,8 @@
 import './App.css';
-import Header from './components/Header';
-import Tasks from './views/Tasks';
-import CompletedTasks from './views/CompletedTasks';
-//import NewTask from './views/NewTask';
+import Header from './components/Header/index';
+import Tasks from './views/Tasks/index';
+import CompletedTasks from './views/CompletedTask/index';
+//import NewTask from './views/NewTask/index';
 import { Switch, Route } from 'react-router-dom';
 
 function App() {

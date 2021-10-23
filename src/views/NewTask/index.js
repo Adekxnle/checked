@@ -1,6 +1,6 @@
-import './NewTask.css';
-import NavIcon from '../assets/navigation-back.svg';
-import Checked from '../assets/checked-white.svg';
+import './style.css';
+import NavIcon from '../../assets/navigation-back.svg';
+import Checked from '../../assets/checked-white.svg';
 
 function NewTask() {
   return (

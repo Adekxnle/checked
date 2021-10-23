@@ -1,4 +1,4 @@
-import './CompletedTasks.css';
+import './style.css';
 
 function CompletedTasks() {
   return (

@@ -1,6 +1,6 @@
-import './Header.css';
-import calenderIcon from '../assets/calender.svg';
-import plusIcon from '../assets/plus.svg';
+import './style.css';
+import calenderIcon from '../../assets/calender.svg';
+import plusIcon from '../../assets/plus.svg';
 import { Link, useLocation } from 'react-router-dom';
 
 function Header() {
