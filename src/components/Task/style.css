@@ -67,10 +67,9 @@ label .task {
   color: var(--off-white);
 }
 
-.task .indicator {
+.task .badge {
   min-height: var(--task-min-height);
   width: 0.4em;
-  background-color: #ff8906;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }

@@ -1,6 +1,6 @@
 import './style.css';
 
-function index({ id, title }) {
+function index({ id, title, badge }) {
   return (
     <div>
       <li className='task-container'>
@@ -24,7 +24,7 @@ function index({ id, title }) {
         </span>
         <label htmlFor={id}>
           <div className='task'>
-            <div className='indicator' />
+            <div className='badge' style={{ background: badge }} />
             <p>{title}</p>
           </div>
         </label>
