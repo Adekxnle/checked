@@ -6,7 +6,7 @@ import NoTask from '../NoTask/index';
 function Tasks() {
   const { tasks } = useContext(TaskContext);
 
-  return tasks ? (
+  return tasks.length ? (
     <div className='tasks-page'>
       <ol>
         {tasks.map((task) => {
