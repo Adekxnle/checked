@@ -10,6 +10,10 @@ function Header() {
 
   const { toggleIsOpen } = useContext(ModalContext);
 
+  const currentDate = Date();
+
+  console.log(currentDate);
+
   return (
     <div className='header'>
       <div className='header-top'>

@@ -29,10 +29,10 @@ function NewTask() {
           <div className='colors'>
             <ul>
               <li>
-                <label class='badge'>
-                  <span class='badge-input'>
+                <label className='badge'>
+                  <span className='badge-input'>
                     <input type='radio' name='badge' />
-                    <span class='badge-control' style={{ backgroundColor: '#ff8906' }}>
+                    <span className='badge-control' style={{ backgroundColor: '#ff8906' }}>
                       <svg
                         width='18'
                         height='14'
