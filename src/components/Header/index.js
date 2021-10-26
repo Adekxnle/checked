@@ -2,9 +2,13 @@ import './style.css';
 import calenderIcon from '../../assets/calender.svg';
 import plusIcon from '../../assets/plus.svg';
 import { Link, useLocation } from 'react-router-dom';
+import { useContext } from 'react';
+import { ModalContext } from '../../context/ModalContext';
 
 function Header() {
   let location = useLocation();
+
+  const { toggleIsOpen } = useContext(ModalContext);
 
   return (
     <div className='header'>
@@ -16,7 +20,7 @@ function Header() {
             <img src={calenderIcon} alt='calender icon' />
           </div>
         </div>
-        <button className='add-new-task-btn'>
+        <button className='add-new-task-btn' onClick={toggleIsOpen}>
           <img src={plusIcon} alt='plus icon' />
           <span>add new task</span>
         </button>

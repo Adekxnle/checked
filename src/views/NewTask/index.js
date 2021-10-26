@@ -1,13 +1,17 @@
 import './style.css';
 import NavIcon from '../../assets/navigation-back.svg';
 import Checked from '../../assets/checked-white.svg';
+import { useContext } from 'react';
+import { ModalContext } from '../../context/ModalContext';
 
 function NewTask() {
+  const { isOpen, toggleIsOpen } = useContext(ModalContext);
+
   return (
-    <div className='new-task-page'>
+    <div className='new-task-page' style={{ visibility: isOpen ? 'visible' : 'hidden' }}>
       <div className='new-task-header'>
         <div className='new-task-header-left'>
-          <img src={NavIcon} alt='navigation icon' />
+          <img src={NavIcon} alt='navigation icon' onClick={toggleIsOpen} />
           <h1>New task</h1>
         </div>
         <button className='btn-finished'>
