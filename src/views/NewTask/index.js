@@ -11,6 +11,10 @@ function NewTask() {
   const colours = [
     { id: uuidv4(), colour: '#ff8906' },
     { id: uuidv4(), colour: '#7f5af0' },
+    { id: uuidv4(), colour: '#00ebc7' },
+    { id: uuidv4(), colour: '#9656a1' },
+    { id: uuidv4(), colour: '#fec7d7' },
+    { id: uuidv4(), colour: '#f25f4c' },
   ];
 
   return (
