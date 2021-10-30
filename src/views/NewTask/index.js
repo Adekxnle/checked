@@ -7,6 +7,8 @@ import { ModalContext } from '../../context/ModalContext';
 function NewTask() {
   const { isOpen, toggleIsOpen } = useContext(ModalContext);
 
+  const colors = ['#ff8906', '#7f5af0'];
+
   return (
     <div className='new-task-page' style={{ visibility: isOpen ? 'visible' : 'hidden' }}>
       <div className='new-task-header'>
@@ -28,26 +30,30 @@ function NewTask() {
           <p>Color badge</p>
           <div className='colors'>
             <ul>
-              <li>
-                <label className='badge'>
-                  <span className='badge-input'>
-                    <input type='radio' name='badge' />
-                    <span className='badge-control' style={{ backgroundColor: '#ff8906' }}>
-                      <svg
-                        width='18'
-                        height='14'
-                        viewBox='0 0 18 14'
-                        fill='none'
-                        xmlns='http://www.w3.org/2000/svg'>
-                        <path
-                          d='M5.6 10.6L1.4 6.40002L0 7.80002L5.6 13.4L17.6 1.4L16.2 0L5.6 10.6Z'
-                          fill='white'
-                        />
-                      </svg>
-                    </span>
-                  </span>
-                </label>
-              </li>
+              {colors.map((color) => {
+                return (
+                  <li>
+                    <label className='badge'>
+                      <span className='badge-input'>
+                        <input type='radio' name='badge' />
+                        <span className='badge-control' style={{ backgroundColor: color }}>
+                          <svg
+                            width='18'
+                            height='14'
+                            viewBox='0 0 18 14'
+                            fill='none'
+                            xmlns='http://www.w3.org/2000/svg'>
+                            <path
+                              d='M5.6 10.6L1.4 6.40002L0 7.80002L5.6 13.4L17.6 1.4L16.2 0L5.6 10.6Z'
+                              fill='white'
+                            />
+                          </svg>
+                        </span>
+                      </span>
+                    </label>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         </div>
