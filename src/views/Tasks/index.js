@@ -6,12 +6,14 @@ import NoTask from '../NoTask/index';
 function Tasks() {
   const { tasks } = useContext(TaskContext);
 
+  console.log(tasks);
+
   return tasks.length ? (
     <div className='tasks-page'>
       <ol>
         {tasks.map((task) => {
           return (
-            <li className='task-container'>
+            <li className='task-container' key={task.id}>
               <span className='checkbox-input'>
                 <input type='checkbox' name='checked' id={task.id} />
                 <span className='checkbox-control'>

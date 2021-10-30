@@ -3,11 +3,15 @@ import NavIcon from '../../assets/navigation-back.svg';
 import Checked from '../../assets/checked-white.svg';
 import { useContext } from 'react';
 import { ModalContext } from '../../context/ModalContext';
+import { v4 as uuidv4 } from 'uuid';
 
 function NewTask() {
   const { isOpen, toggleIsOpen } = useContext(ModalContext);
 
-  const colors = ['#ff8906', '#7f5af0'];
+  const colours = [
+    { id: uuidv4(), colour: '#ff8906' },
+    { id: uuidv4(), colour: '#7f5af0' },
+  ];
 
   return (
     <div className='new-task-page' style={{ visibility: isOpen ? 'visible' : 'hidden' }}>
@@ -30,13 +34,13 @@ function NewTask() {
           <p>Color badge</p>
           <div className='colors'>
             <ul>
-              {colors.map((color) => {
+              {colours.map((colour) => {
                 return (
-                  <li>
+                  <li key={colour.id}>
                     <label className='badge'>
                       <span className='badge-input'>
                         <input type='radio' name='badge' />
-                        <span className='badge-control' style={{ backgroundColor: color }}>
+                        <span className='badge-control' style={{ backgroundColor: colour.colour }}>
                           <svg
                             width='18'
                             height='14'

@@ -1,11 +1,12 @@
 import { createContext, useState } from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 export const TaskContext = createContext();
 
 function TaskContextProvider(props) {
   const [tasks] = useState([
-    { id: 1, title: 'wash them plates!', badge: '#7f5af0' },
-    { id: 2, title: 'feed the dogs!', badge: '#ff8906' },
+    { id: uuidv4(), title: 'wash them plates!', badge: '#7f5af0' },
+    { id: uuidv4(), title: 'feed the dogs!', badge: '#ff8906' },
   ]);
 
   return <TaskContext.Provider value={{ tasks }}>{props.children}</TaskContext.Provider>;
