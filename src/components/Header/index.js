@@ -10,9 +10,11 @@ function Header() {
 
   const { toggleIsOpen } = useContext(ModalContext);
 
-  const currentDate = Date();
+  const currentDate = new Date();
 
-  console.log(currentDate);
+  //const [month, day, year] = [currentDate, currentDate, currentDate.getFullYear()];
+
+  //console.log(currentDate.toDateString());
 
   return (
     <div className='header'>
@@ -20,7 +22,7 @@ function Header() {
         <div className='header-top-left'>
           <span className='header-bullet' />
           <div className='date-container'>
-            <h1 className='date'>August 21, 2021</h1>
+            <h1 className='date'>{currentDate.toDateString()}</h1>
             <img src={calenderIcon} alt='calender icon' />
           </div>
         </div>
