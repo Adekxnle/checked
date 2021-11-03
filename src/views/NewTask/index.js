@@ -13,8 +13,9 @@ function NewTask() {
     { id: uuidv4(), colour: '#7f5af0' },
     { id: uuidv4(), colour: '#00ebc7' },
     { id: uuidv4(), colour: '#9656a1' },
-    { id: uuidv4(), colour: '#fec7d7' },
     { id: uuidv4(), colour: '#f25f4c' },
+    { id: uuidv4(), colour: '#4fc4cf' },
+    { id: uuidv4(), colour: '#2cb67d' },
   ];
 
   return (

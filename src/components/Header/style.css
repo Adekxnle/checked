@@ -1,3 +1,7 @@
+:root {
+  --header-bullet: 1.56em;
+}
+
 .header-top {
   display: flex;
   justify-content: space-between;
@@ -35,10 +39,6 @@
   margin-right: 0.5em;
 }
 
-/* @media screen {
-  
-} */
-
 .header-bottom {
   margin-top: 2rem;
 }
@@ -72,4 +72,20 @@ li .tabs {
   height: 0.16em;
   background-color: var(--primary);
   border-radius: 4px;
+}
+
+/*--media queries--*/
+
+@media screen and (max-width: 570px) {
+  :root {
+    --header-bullet: 1.26em;
+  }
+
+  .add-new-task-btn {
+    display: none;
+  }
+
+  .header-top {
+    display: inline;
+  }
 }
