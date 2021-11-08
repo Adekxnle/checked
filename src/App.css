@@ -8,3 +8,11 @@
 .pages {
   min-height: 30em;
 }
+
+/*--media queries*/
+
+@media screen and (max-width: 570px) {
+  .app {
+    padding: 1.4em 1.4em;
+  }
+}

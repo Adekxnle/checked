@@ -23,6 +23,7 @@
 .date-container {
   display: flex;
   margin-left: 1rem;
+  height: -moz-fit-content;
 }
 
 .date {
@@ -50,6 +51,7 @@
   align-items: start;
   list-style: none;
   margin: 0;
+  padding-inline-start: 2.8rem;
 }
 
 .tab {
@@ -87,5 +89,10 @@ li .tabs {
 
   .header-top {
     display: inline;
+  }
+
+  .header-bottom ul {
+    grid-gap: 2rem;
+    padding-inline-start: 2rem;
   }
 }

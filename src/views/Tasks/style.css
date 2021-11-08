@@ -16,7 +16,8 @@
 li.task-container {
   display: flex;
   position: relative;
-  gap: 1rem;
+  gap: 2rem;
+  grid-gap: 2rem;
   padding-bottom: 4rem;
 }
 
@@ -74,7 +75,6 @@ li.task-container {
 label .task {
   min-height: var(--task-min-height);
   width: 50ch;
-  margin-left: 1.3em;
   background-color: var(--tertiary);
   display: flex;
   border-radius: 8px;
@@ -104,10 +104,14 @@ label .task {
 
   label .task {
     width: 100%;
-    margin-left: 1em;
   }
 
   .task .badge {
-    width: 0.4em;
+    min-width: 0.4em;
+  }
+
+  li.task-container {
+    gap: 1rem;
+    grid-gap: 1rem;
   }
 }
