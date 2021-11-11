@@ -40,18 +40,12 @@
   margin-right: 0.5em;
 }
 
-.header-bottom {
-  margin-top: 2rem;
-}
-
-.header-bottom ul {
-  display: grid;
-  grid-template-columns: min-content max-content;
+.links-container ul {
+  display: flex;
   grid-gap: 4rem;
   align-items: start;
   list-style: none;
   margin: 0;
-  padding-inline-start: 2.8rem;
 }
 
 .tab {
@@ -91,8 +85,8 @@ li .tabs {
     display: inline;
   }
 
-  .header-bottom ul {
+  /* .header-bottom ul {
     grid-gap: 2rem;
     padding-inline-start: 2rem;
-  }
+  } */
 }

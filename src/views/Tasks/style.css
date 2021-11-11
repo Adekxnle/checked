@@ -90,7 +90,7 @@ label .task {
 }
 
 .task p {
-  margin: 1em;
+  margin: 0.8em 0.8em;
   line-height: 1.5;
 }
 
@@ -107,7 +107,7 @@ label .task {
   }
 
   .task .badge {
-    min-width: 0.4em;
+    min-width: 0.3em;
   }
 
   li.task-container {

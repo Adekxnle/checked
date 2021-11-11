@@ -21,35 +21,37 @@ function Header() {
       <div className='header-top'>
         <div className='header-top-left'>
           <span className='header-bullet' />
-          <div className='date-container'>
-            <h1 className='date'>{currentDate.toDateString()}</h1>
-            <img src={calenderIcon} alt='calender icon' />
+          <div className='container'>
+            <div className='date-container'>
+              <h1 className='date'>{currentDate.toDateString()}</h1>
+              <img src={calenderIcon} alt='calender icon' />
+            </div>
+            <div className='links-container'>
+              <ul>
+                <li>
+                  <Link className='tabs' to='/'>
+                    <div className='tab'>
+                      <h2> Tasks </h2>
+                      {location.pathname === '/' ? <div className='active' /> : ''}
+                    </div>
+                  </Link>
+                </li>
+                <li>
+                  <Link className='tabs' to='/completed-tasks'>
+                    <div className='tab'>
+                      <h2>Completed Tasks</h2>
+                      {location.pathname === '/completed-tasks' ? <div className='active' /> : ''}
+                    </div>
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
         <button className='add-new-task-btn' onClick={toggleIsOpen}>
           <img src={plusIcon} alt='plus icon' />
           <span>add new task</span>
         </button>
-      </div>
-      <div className='header-bottom'>
-        <ul>
-          <li>
-            <Link className='tabs' to='/'>
-              <div className='tab'>
-                <h2> Tasks </h2>
-                {location.pathname === '/' ? <div className='active' /> : ''}
-              </div>
-            </Link>
-          </li>
-          <li>
-            <Link className='tabs' to='/completed-tasks'>
-              <div className='tab'>
-                <h2>Completed Tasks</h2>
-                {location.pathname === '/completed-tasks' ? <div className='active' /> : ''}
-              </div>
-            </Link>
-          </li>
-        </ul>
       </div>
     </div>
   );

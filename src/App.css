@@ -1,7 +1,7 @@
 .app {
   background: var(--secondary);
   min-height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
   padding: 2em 2em;
 }
 
