@@ -2,57 +2,65 @@
   --header-bullet: 1.56em;
 }
 
-.header-top {
+.c__header-top {
   display: flex;
   justify-content: space-between;
 }
 
-.header-top-left {
+.c__header-top-left {
   display: flex;
 }
 
-.header-bullet {
+.c__header-bullet {
   width: var(--header-bullet);
   height: var(--header-bullet);
   border-radius: 50%;
   background: var(--primary);
-  align-self: center;
+  align-self: flex-start;
   cursor: pointer;
+  margin: 0.25em 0em;
 }
 
-.date-container {
+.c__header-top-left .c__container {
   display: flex;
-  margin-left: 1rem;
-  height: -moz-fit-content;
+  flex-direction: column;
+  gap: 2.6rem;
+  padding-left: 1.5em;
 }
 
-.date {
+.c__date-container {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.date-txt {
   color: var(--off-white);
-  margin-right: 0.5em;
+  margin: 0;
   font-weight: bold;
 }
 
-.add-new-task-btn {
-  align-self: center;
+.c__add-new-task-btn {
+  align-self: flex-start;
 }
 
-.add-new-task-btn img {
+.c__add-new-task-btn img {
   margin-right: 0.5em;
 }
 
-.links-container ul {
+.c__links-container ul {
   display: flex;
-  grid-gap: 4rem;
-  align-items: start;
+  grid-gap: 3rem;
+  align-items: flex-start;
   list-style: none;
   margin: 0;
+  padding: 0;
 }
 
-.tab {
+.c__tab {
   display: block;
 }
 
-li .tab h2 {
+li .c__tab h2 {
   color: var(--off-white);
   margin: 0.12em 0;
   font-weight: 600;
@@ -60,11 +68,11 @@ li .tab h2 {
   font-size: var(--h2);
 }
 
-li .tabs {
+li .c__tabs {
   text-decoration: none;
 }
 
-.tab .active {
+.c__tab .active {
   height: 0.16em;
   background-color: var(--primary);
   border-radius: 4px;
@@ -72,21 +80,24 @@ li .tabs {
 
 /*--media queries--*/
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 520px) {
   :root {
     --header-bullet: 1.26em;
   }
 
-  .add-new-task-btn {
+  .c__add-new-task-btn {
     display: none;
   }
 
-  .header-top {
-    display: inline;
+  .c__header-bullet {
+    margin: 0.4em 0em;
   }
 
-  /* .header-bottom ul {
+  .c__header-top-left .c__container {
+    gap: 2rem;
+  }
+
+  .c__links-container ul {
     grid-gap: 2rem;
-    padding-inline-start: 2rem;
-  } */
+  }
 }

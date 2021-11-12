@@ -17,28 +17,28 @@ function Header() {
   //console.log(currentDate.toDateString());
 
   return (
-    <div className='header'>
-      <div className='header-top'>
-        <div className='header-top-left'>
-          <span className='header-bullet' />
-          <div className='container'>
-            <div className='date-container'>
-              <h1 className='date'>{currentDate.toDateString()}</h1>
+    <div className='c__header'>
+      <div className='c__header-top'>
+        <div className='c__header-top-left'>
+          <span className='c__header-bullet' />
+          <div className='c__container'>
+            <div className='c__date-container'>
+              <h1 className='date-txt'>{currentDate.toDateString()}</h1>
               <img src={calenderIcon} alt='calender icon' />
             </div>
-            <div className='links-container'>
+            <div className='c__links-container'>
               <ul>
                 <li>
-                  <Link className='tabs' to='/'>
-                    <div className='tab'>
+                  <Link className='c__tabs' to='/'>
+                    <div className='c__tab'>
                       <h2> Tasks </h2>
                       {location.pathname === '/' ? <div className='active' /> : ''}
                     </div>
                   </Link>
                 </li>
                 <li>
-                  <Link className='tabs' to='/completed-tasks'>
-                    <div className='tab'>
+                  <Link className='c__tabs' to='/completed-tasks'>
+                    <div className='c__tab'>
                       <h2>Completed Tasks</h2>
                       {location.pathname === '/completed-tasks' ? <div className='active' /> : ''}
                     </div>
@@ -48,7 +48,7 @@ function Header() {
             </div>
           </div>
         </div>
-        <button className='add-new-task-btn' onClick={toggleIsOpen}>
+        <button className='c__add-new-task-btn' onClick={toggleIsOpen}>
           <img src={plusIcon} alt='plus icon' />
           <span>add new task</span>
         </button>
