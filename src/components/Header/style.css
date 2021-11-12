@@ -49,7 +49,7 @@
 
 .c__links-container ul {
   display: flex;
-  grid-gap: 3rem;
+  gap: 3rem;
   align-items: flex-start;
   list-style: none;
   margin: 0;
@@ -94,11 +94,11 @@ li .c__tabs {
   }
 
   .c__header-top-left .c__container {
-    gap: 2rem;
+    gap: 2.8rem;
   }
 
   .c__links-container ul {
-    grid-gap: 2rem;
+    grid: 2rem;
   }
 }
 
@@ -115,5 +115,24 @@ li .c__tabs {
     flex-direction: row-reverse;
     width: fit-content;
     gap: 1rem;
+  }
+
+  .c__header-top-left {
+    display: block;
+    width: 100%;
+  }
+
+  .c__links-container ul {
+    width: 100%;
+    justify-content: space-around;
+    gap: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .c__links-container ul {
+    flex-direction: column;
+    width: fit-content;
+    padding-inline-start: 2rem;
   }
 }
