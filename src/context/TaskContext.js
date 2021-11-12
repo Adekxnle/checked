@@ -18,6 +18,18 @@ function TaskContextProvider(props) {
       badge: '#ff8906',
     },
     { id: uuidv4(), title: 'Read your books!', badge: '#2cb67d' },
+    {
+      id: uuidv4(),
+      title:
+        'feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!',
+      badge: '#ff8906',
+    },
+    {
+      id: uuidv4(),
+      title:
+        'feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!',
+      badge: '#ff8906',
+    },
   ]);
 
   return <TaskContext.Provider value={{ tasks }}>{props.children}</TaskContext.Provider>;
