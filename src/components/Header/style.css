@@ -101,3 +101,19 @@ li .c__tabs {
     grid-gap: 2rem;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .c__header-bullet {
+    display: none;
+  }
+
+  .c__header-top-left .c__container {
+    padding: 0;
+  }
+
+  .c__date-container {
+    flex-direction: row-reverse;
+    width: fit-content;
+    gap: 1rem;
+  }
+}
