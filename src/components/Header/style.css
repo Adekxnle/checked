@@ -103,7 +103,7 @@ li .c__tabs {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 390px) {
   .c__header-bullet {
     display: none;
   }
