@@ -138,3 +138,13 @@ li .c__tabs {
     padding-inline-start: 2rem;
   }
 }
+
+@media screen and (max-width: 210px) {
+  .c__links-container ul {
+    padding-inline-start: 0;
+  }
+
+  .c__date-container svg {
+    display: none;
+  }
+}
