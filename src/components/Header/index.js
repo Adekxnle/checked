@@ -1,5 +1,5 @@
 import './style.css';
-import calenderIcon from '../../assets/calender.svg';
+//import calenderIcon from '../../assets/calender.svg';
 import plusIcon from '../../assets/plus.svg';
 import { Link, useLocation } from 'react-router-dom';
 import { useContext } from 'react';
@@ -24,7 +24,41 @@ function Header() {
           <div className='c__container'>
             <div className='c__date-container'>
               <h1 className='date-txt'>{currentDate.toDateString()}</h1>
-              <img src={calenderIcon} alt='calender icon' />
+              <svg
+                width='22'
+                height='22'
+                viewBox='0 0 22 22'
+                fill='none'
+                xmlns='http://www.w3.org/2000/svg'>
+                <path
+                  d='M17 3H5C2.79086 3 1 4.79086 1 7V17C1 19.2091 2.79086 21 5 21H17C19.2091 21 21 19.2091 21 17V7C21 4.79086 19.2091 3 17 3Z'
+                  stroke='white'
+                  strokeWidth='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                />
+                <path
+                  d='M7 1V5'
+                  stroke='white'
+                  strokeWidth='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                />
+                <path
+                  d='M15 1V5'
+                  stroke='white'
+                  strokeWidth='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                />
+                <path
+                  d='M1 9H21'
+                  stroke='white'
+                  strokeWidth='2'
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                />
+              </svg>
             </div>
             <div className='c__links-container'>
               <ul>
