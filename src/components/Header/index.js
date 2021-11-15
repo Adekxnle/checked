@@ -72,7 +72,7 @@ function Header() {
                 <li>
                   <Link className='c__tabs' to='/completed-tasks'>
                     <div className='c__tab'>
-                      <h2>Completed Tasks(12)</h2>
+                      <h2>Completed Tasks (12)</h2>
                       {location.pathname === '/completed-tasks' ? <div className='active' /> : ''}
                     </div>
                   </Link>
