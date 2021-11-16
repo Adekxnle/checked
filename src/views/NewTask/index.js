@@ -27,7 +27,7 @@ function NewTask() {
         </div>
         <button className='btn-finished'>
           <img src={Checked} alt='checked icon' />
-          <span>finished</span>
+          <span>done</span>
         </button>
       </div>
       <div className='new-task-page-content'>

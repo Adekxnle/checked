@@ -96,14 +96,16 @@ label .task {
 
 /*--media queries--*/
 
-@media screen and (max-width: 570px) {
+@media screen and (max-width: 580px) {
+  label .task {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 520px) {
   :root {
     --task-min-height: 3em;
     --task-bullet: 1.2em;
-  }
-
-  label .task {
-    width: 100%;
   }
 
   .task .badge {
