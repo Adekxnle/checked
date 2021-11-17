@@ -19,7 +19,7 @@ function NewTask() {
   ];
 
   return (
-    <div className='new-task-page' style={{ visibility: isOpen ? 'visible' : 'hidden' }}>
+    <div className='new-task-page' style={{ display: isOpen ? 'block' : 'none' }}>
       <div className='new-task-header'>
         <div className='new-task-header-left'>
           <img src={NavIcon} alt='navigation icon' onClick={toggleIsOpen} />
