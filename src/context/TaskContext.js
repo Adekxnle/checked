@@ -14,7 +14,7 @@ function TaskContextProvider(props) {
     {
       id: uuidv4(),
       title:
-        'feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!',
+        'feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs! feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!',
       badge: '#ff8906',
     },
     { id: uuidv4(), title: 'Read your books!', badge: '#2cb67d' },
