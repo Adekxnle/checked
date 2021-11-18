@@ -6,7 +6,7 @@
 }
 
 .pages {
-  min-height: 30em;
+  min-height: calc(100vh - 114px);
 }
 
 /*--media queries*/

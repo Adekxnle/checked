@@ -1,11 +1,11 @@
 .new-task-page {
-  height: inherit;
+  height: 100vh;
   width: inherit;
   background-color: var(--tertiary);
   position: absolute;
   top: 0;
-  left: 0;
-  padding: 2em 2em;
+  right: 0;
+  padding: 1em 2em;
   z-index: 3;
 }
 
