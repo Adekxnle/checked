@@ -128,3 +128,11 @@ input[id='title']:focus {
 .badge-input input:checked + .badge-control svg {
   transform: scale(1);
 }
+
+/*--media queries--*/
+
+@media screen and (max-width: 950px) {
+  .new-task-page {
+    width: 100vw;
+  }
+}
