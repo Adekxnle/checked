@@ -12,6 +12,7 @@
 .tasks-page ol {
   margin: 0;
   padding: 0;
+  width: min(70ch, 100%);
 }
 
 li.task-container {
