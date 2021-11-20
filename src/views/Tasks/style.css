@@ -74,9 +74,13 @@ li.task-container {
   border: 0.125em solid #2e7d32;
 }
 
+/* label{
+
+} */
+
 label .task {
   height: max(var(--task-min-height), auto);
-  width: clamp(50ch, 70ch, 70%);
+  width: min(65ch, 100%);
   background-color: var(--tertiary);
   display: flex;
   border-radius: 8px;
