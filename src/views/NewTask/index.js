@@ -33,7 +33,7 @@ function NewTask() {
       <div className='new-task-page-content'>
         <div className='input-title'>
           <label htmlFor='title'>Title</label>
-          <input type='text' id='title' />
+          <textarea type='text' id='title' />
         </div>
         <div className='color-badge'>
           <p>Color badge</p>

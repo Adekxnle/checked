@@ -56,9 +56,9 @@
   font-weight: 500;
 }
 
-.input-title input[id='title'] {
+.input-title textarea[id='title'] {
   width: 28rem;
-  min-height: 2.8rem;
+  height: 2.8rem;
   background: none;
   border: 1.5px solid var(--off-white);
   border-radius: 8px;
@@ -69,7 +69,7 @@
   transition: 180ms box-shadow ease-in-out;
 }
 
-input[id='title']:focus {
+textarea[id='title']:focus {
   border-color: hsl(234.8, 15%, 70%);
   box-shadow: 0 0 0 2px hsla(234.8, 15%, calc(70% + 20%), 0.8);
   outline: 2px solid transparent;
