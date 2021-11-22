@@ -11,10 +11,8 @@ function NewTask() {
   const colours = [
     { id: uuidv4(), colour: '#ff8906' },
     { id: uuidv4(), colour: '#7f5af0' },
-    { id: uuidv4(), colour: '#00ebc7' },
     { id: uuidv4(), colour: '#9656a1' },
     { id: uuidv4(), colour: '#f25f4c' },
-    { id: uuidv4(), colour: '#4fc4cf' },
     { id: uuidv4(), colour: '#2cb67d' },
   ];
 
@@ -33,7 +31,7 @@ function NewTask() {
       <div className='new-task-page-content'>
         <div className='input-title'>
           <label htmlFor='title'>Title</label>
-          <textarea type='text' id='title' />
+          <textarea type='text' id='title' maxLength='150' />
         </div>
         <div className='color-badge'>
           <p>Color badge</p>
