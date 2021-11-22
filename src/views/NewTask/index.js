@@ -1,5 +1,4 @@
 import './style.css';
-import NavIcon from '../../assets/navigation-back.svg';
 import Checked from '../../assets/checked-white.svg';
 import { useContext } from 'react';
 import { ModalContext } from '../../context/ModalContext';
@@ -20,7 +19,18 @@ function NewTask() {
     <div className='new-task-page' style={{ display: isOpen ? 'block' : 'none' }}>
       <div className='new-task-header'>
         <div className='new-task-header-left'>
-          <img src={NavIcon} alt='navigation icon' onClick={toggleIsOpen} />
+          <svg
+            onClick={toggleIsOpen}
+            width='24'
+            height='24'
+            viewBox='0 0 24 24'
+            fill='none'
+            xmlns='http://www.w3.org/2000/svg'>
+            <path
+              d='M8.59009 16.59L13.1701 12L8.59009 7.41L10.0001 6L16.0001 12L10.0001 18L8.59009 16.59Z'
+              fill='#e6e6e6'
+            />
+          </svg>
           <h1>New task</h1>
         </div>
         <button className='btn-finished'>

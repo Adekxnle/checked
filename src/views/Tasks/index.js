@@ -1,10 +1,15 @@
 import './style.css';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { TaskContext } from '../../context/TaskContext';
 import NoTask from '../NoTask/index';
 
 function Tasks() {
+  const [checked, setChecked] = useState(false);
   const { tasks } = useContext(TaskContext);
+
+  const updateChecked = () => {
+    setChecked(!checked);
+  };
 
   return tasks.length ? (
     <div className='tasks-page'>
@@ -13,7 +18,7 @@ function Tasks() {
           return (
             <li className='task-container' key={task.id}>
               <span className='checkbox-input'>
-                <input type='checkbox' name='checked' id={task.id} />
+                <input type='checkbox' name='checked' id={task.id} onChange={updateChecked} />
                 <span className='checkbox-control'>
                   <svg
                     width='18'
@@ -33,7 +38,7 @@ function Tasks() {
               <label htmlFor={task.id}>
                 <div className='task'>
                   <div className='badge' style={{ background: task.badge }} />
-                  <p>{task.title}</p>
+                  <p style={{ textDecoration: checked ? 'line-through' : 'none' }}>{task.title}</p>
                 </div>
               </label>
             </li>

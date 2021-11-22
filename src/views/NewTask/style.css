@@ -21,12 +21,12 @@
   align-self: center;
 }
 
-.new-task-header-left img {
+.new-task-header-left svg {
   cursor: pointer;
 }
 
 .new-task-header-left h1 {
-  margin-left: 2rem;
+  margin-left: 1.5rem;
   font-weight: bold;
 }
 
@@ -94,6 +94,7 @@ textarea[id='title']:focus {
   display: flex;
   gap: 1em;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 .badge-input {
@@ -138,5 +139,11 @@ textarea[id='title']:focus {
 @media screen and (max-width: 950px) {
   .new-task-page {
     width: 100vw;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .btn-finished {
+    display: none;
   }
 }
