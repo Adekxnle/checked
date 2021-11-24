@@ -1,14 +1,14 @@
 import './style.css';
-import { useContext, useState } from 'react';
+import { useContext } from 'react';
 import { TaskContext } from '../../context/TaskContext';
 import NoTask from '../NoTask/index';
 
 function Tasks() {
-  const [checked, setChecked] = useState(false);
-  const { tasks } = useContext(TaskContext);
+  const { tasks, toggleTaskCompleted } = useContext(TaskContext);
 
-  const updateChecked = () => {
-    setChecked(!checked);
+  const handleUpdateChecked = (e, task_id) => {
+    //console.log(e.target);
+    toggleTaskCompleted(task_id);
   };
 
   return tasks.length ? (
@@ -18,7 +18,14 @@ function Tasks() {
           return (
             <li className='task-container' key={task.id}>
               <span className='checkbox-input'>
-                <input type='checkbox' name='checked' id={task.id} onChange={updateChecked} />
+                <input
+                  type='checkbox'
+                  name='checked'
+                  id={task.id}
+                  onChange={(e) => {
+                    handleUpdateChecked(e, task.id);
+                  }}
+                />
                 <span className='checkbox-control'>
                   <svg
                     width='18'
@@ -38,7 +45,9 @@ function Tasks() {
               <label htmlFor={task.id}>
                 <div className='task'>
                   <div className='badge' style={{ background: task.badge }} />
-                  <p style={{ textDecoration: checked ? 'line-through' : 'none' }}>{task.title}</p>
+                  <p style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
+                    {task.title}
+                  </p>
                 </div>
               </label>
             </li>

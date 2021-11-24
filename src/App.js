@@ -15,11 +15,11 @@ function App() {
           <Header />
           <div className='pages'>
             <Switch>
-              <Route exact path='/'>
-                <Tasks />
-              </Route>
               <Route path='/completed-tasks'>
                 <CompletedTasks />
+              </Route>
+              <Route exact path='/'>
+                <Tasks />
               </Route>
             </Switch>
           </div>
