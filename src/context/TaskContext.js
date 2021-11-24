@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 export const TaskContext = createContext();
 
 function TaskContextProvider(props) {
-  const [tasks] = useState([
+  const [tasks, setTasks] = useState([
     {
       id: uuidv4(),
       title:
@@ -22,7 +22,17 @@ function TaskContextProvider(props) {
     { id: uuidv4(), title: 'Read your books!', badge: '#2cb67d', completed: false },
   ]);
 
-  return <TaskContext.Provider value={{ tasks }}>{props.children}</TaskContext.Provider>;
+  const toggleTaskCompleted = (task_id) => {
+    const completedTask = tasks.find((task) => task.id === task_id);
+    //console.log({ ...completedTask, completed: !completedTask.completed });
+    //setTasks([...tasks, { ...completed, completed: !completed }]);
+  };
+
+  return (
+    <TaskContext.Provider value={{ tasks, toggleTaskCompleted }}>
+      {props.children}
+    </TaskContext.Provider>
+  );
 }
 
 export default TaskContextProvider;
