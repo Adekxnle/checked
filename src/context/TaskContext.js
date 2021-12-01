@@ -23,15 +23,14 @@ function TaskContextProvider(props) {
   ]);
 
   const toggleTaskCompleted = (task_id) => {
-    const completedTask = tasks.find((task) => {
+    const newTasks = tasks.map((task) => {
       if (task.id === task_id) {
         task.completed = !task.completed;
-        const newCompletedTask = { ...task };
-        return newCompletedTask;
       }
+      return { ...task };
     });
-    console.log(completedTask);
-    //setTasks([...tasks, { ...completed, completed: !completed }]);
+
+    setTasks(newTasks);
   };
 
   return (
