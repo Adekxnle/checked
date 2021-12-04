@@ -135,15 +135,10 @@ li .tabs {
   .links-container ul {
     flex-direction: column;
     width: fit-content;
-    padding-inline-start: 2rem;
   }
 }
 
-@media screen and (max-width: 210px) {
-  .links-container ul {
-    padding-inline-start: 0;
-  }
-
+@media screen and (max-width: 262px) {
   .date-container svg {
     display: none;
   }

@@ -3,11 +3,13 @@ import plusIcon from '../../assets/plus.svg';
 import { Link, useLocation } from 'react-router-dom';
 import { useContext } from 'react';
 import { ModalContext } from '../../context/ModalContext';
+import { TaskContext } from '../../context/TaskContext';
 
 function Header() {
   let location = useLocation();
 
   const { toggleIsOpen } = useContext(ModalContext);
+  const { tasks } = useContext(TaskContext);
 
   const currentDate = new Date();
 
@@ -81,10 +83,14 @@ function Header() {
             </div>
           </div>
         </div>
-        <button className='add-new-task-btn' onClick={toggleIsOpen}>
-          <img src={plusIcon} alt='plus icon' />
-          <span>add new task</span>
-        </button>
+        {tasks.lenght ? (
+          <button className='add-new-task-btn' onClick={toggleIsOpen}>
+            <img src={plusIcon} alt='plus icon' />
+            <span>add new task</span>
+          </button>
+        ) : (
+          ''
+        )}
       </div>
     </div>
   );

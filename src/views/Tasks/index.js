@@ -45,7 +45,10 @@ function Tasks() {
               <label htmlFor={task.id}>
                 <div className='task'>
                   <div className='badge' style={{ background: task.badge }} />
-                  <p style={{ textDecoration: task.completed ? 'line-through' : 'none' }}>
+                  <p
+                    style={{
+                      textDecoration: task.completed ? 'line-through' : 'none',
+                    }}>
                     {task.title}
                   </p>
                 </div>

@@ -105,6 +105,7 @@ label .task {
   line-height: 1.4;
   text-overflow: ellipsis;
   overflow: hidden;
+  /* transition: text-decoration 20s ease-out 25ms; */
 }
 
 /*--media queries--*/
