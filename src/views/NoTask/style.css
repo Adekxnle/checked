@@ -11,3 +11,9 @@
   text-align: center;
   line-height: 1.6;
 }
+
+@media screen and (max-width: 200px) {
+  .no-task-page img {
+    display: none;
+  }
+}
