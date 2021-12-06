@@ -108,6 +108,35 @@ label .task {
   /* transition: text-decoration 20s ease-out 25ms; */
 }
 
+.add-new-task-btn-sm {
+  position: fixed;
+  bottom: 5vh;
+  right: 5vw;
+  height: 3rem;
+  width: 3rem;
+  background-color: var(--primary);
+  background-position: center;
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.8s;
+  display: none;
+}
+
+.add-new-task-btn-sm:hover {
+  background: #b0b2c5 radial-gradient(circle, transparent 1%, #b0b2c5 1%) center/15000%;
+}
+
+.add-new-task-btn-sm:active {
+  background-color: #cacbd8;
+  background-size: 100%;
+  transition: background 0s;
+}
+
 /*--media queries--*/
 
 @media screen and (max-width: 580px) {
@@ -129,5 +158,9 @@ label .task {
   li.task-container {
     gap: 1rem;
     grid-gap: 1rem;
+  }
+
+  .add-new-task-btn-sm {
+    display: inline-flex;
   }
 }

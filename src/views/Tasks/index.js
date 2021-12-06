@@ -1,10 +1,12 @@
 import './style.css';
 import { useContext } from 'react';
 import { TaskContext } from '../../context/TaskContext';
+import { ModalContext } from '../../context/ModalContext';
 import NoTask from '../NoTask/index';
 
 function Tasks() {
   const { tasks, toggleTaskCompleted } = useContext(TaskContext);
+  const { toggleIsOpen } = useContext(ModalContext);
 
   const handleUpdateChecked = (e, task_id) => {
     //console.log(e.target);
@@ -57,7 +59,16 @@ function Tasks() {
           );
         })}
       </ol>
-      <span></span>
+      <a href='/#' className='add-new-task-btn-sm' onClick={toggleIsOpen}>
+        <svg
+          width='14'
+          height='14'
+          viewBox='0 0 14 14'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'>
+          <path d='M14 8H8V14H6V8H0V6H6V0H8V6H14V8Z' fill='#e6e6e6' />
+        </svg>
+      </a>
     </div>
   ) : (
     <NoTask />
