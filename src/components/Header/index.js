@@ -83,7 +83,7 @@ function Header() {
             </div>
           </div>
         </div>
-        {tasks.lenght ? (
+        {tasks.length ? (
           <button className='add-new-task-btn' onClick={toggleIsOpen}>
             <img src={plusIcon} alt='plus icon' />
             <span>add new task</span>
