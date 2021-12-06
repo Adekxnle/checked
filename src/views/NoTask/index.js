@@ -3,8 +3,12 @@ import illustration_200 from '../../assets/illustration_w-200.svg';
 import illustration_300 from '../../assets/illustration_w-300.svg';
 import illustration_400 from '../../assets/illustration_w-400.svg';
 import illustration_500 from '../../assets/illustration_w-500.svg';
+import { ModalContext } from '../../context/ModalContext';
+import { useContext } from 'react';
 
 function NoTask() {
+  const { toggleIsOpen } = useContext(ModalContext);
+
   return (
     <div className='pages no-task-page'>
       <img
@@ -13,7 +17,9 @@ function NoTask() {
         alt='illustration of a person relaxing'
       />
       <p>You don't have any task set for today</p>
-      <button className='create-new-task-btn'>Create new task</button>
+      <button className='create-new-task-btn' onClick={toggleIsOpen}>
+        Create new task
+      </button>
     </div>
   );
 }
