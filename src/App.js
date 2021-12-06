@@ -6,12 +6,17 @@ import NewTask from './views/NewTask/index';
 import { Switch, Route } from 'react-router-dom';
 import TaskContextProvider from './context/TaskContext';
 import ModalContextProvider from './context/ModalContext';
+// import { ModalContext } from './context/ModalContext';
+// import { useContext } from 'react';
 
 function App() {
+  // const { toggleIsOpen } = useContext(ModalContext);
+  // \${/*toggleIsOpen ? 'scroll-element-when-modal-active' : null*/}
+
   return (
     <TaskContextProvider>
       <ModalContextProvider>
-        <div className='app'>
+        <div className={`app`}>
           <Header />
           <div className='pages'>
             <Switch>
