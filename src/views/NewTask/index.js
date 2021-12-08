@@ -78,7 +78,7 @@ function NewTask() {
             </div>
           </div>
         </div>
-        <a href='/#' className='btn-finished-sm' onClick={toggleIsOpen}>
+        <a href='/#' className='btn-finished-sm'>
           <svg
             width='18'
             height='14'

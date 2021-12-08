@@ -21,6 +21,7 @@ function Tasks() {
             <li className='task-container' key={task.id}>
               <span className='checkbox-input'>
                 <input
+                  checked={task.completed ? true : false}
                   type='checkbox'
                   name='checked'
                   id={task.id}
