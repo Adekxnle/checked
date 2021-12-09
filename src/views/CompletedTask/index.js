@@ -13,9 +13,9 @@ function CompletedTasks() {
   return (
     <div className='completed-task-page'>
       <ol>
-        {tasks.map((task) => {
-          return (
-            <li className='task-container' key={task.id}>
+        {tasks.map((task) =>
+          task.completed ? (
+            <li className='completed-task-container' key={task.id}>
               <span className='checkbox-input'>
                 <input
                   checked={task.completed ? true : false}
@@ -54,8 +54,10 @@ function CompletedTasks() {
                 </div>
               </label>
             </li>
-          );
-        })}
+          ) : (
+            ''
+          )
+        )}
       </ol>
     </div>
   );

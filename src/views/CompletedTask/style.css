@@ -8,3 +8,18 @@
   padding: 0;
   width: min(70ch, 100%);
 }
+
+li.completed-task-container {
+  display: flex;
+  position: relative;
+  gap: 2rem;
+  grid-gap: 2rem;
+  padding-bottom: 4rem;
+}
+
+@media screen and (max-width: 520px) {
+  li.completed-task-container {
+    gap: 1rem;
+    grid-gap: 1rem;
+  }
+}
