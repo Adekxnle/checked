@@ -33,6 +33,8 @@ function TaskContextProvider(props) {
     setTasks(newTasks);
   };
 
+  //const completedTasks = tasks.map((task) => );
+
   return (
     <TaskContext.Provider value={{ tasks, toggleTaskCompleted }}>
       {props.children}
