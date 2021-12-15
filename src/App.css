@@ -9,15 +9,6 @@
   min-height: calc(100vh - 114px);
 }
 
-.scroll-element-when-modal-isOpen {
-  /* when modal active */
-  touch-action: none;
-  -webkit-overflow-scrolling: none;
-  overflow: hidden;
-  /* Other browsers */
-  overscroll-behavior: none;
-}
-
 /*--media queries*/
 
 @media screen and (max-width: 570px) {

@@ -1,8 +1,8 @@
 import './style.css';
-import illustration_200 from '../../assets/illustration_w-200.svg';
-import illustration_300 from '../../assets/illustration_w-300.svg';
-import illustration_400 from '../../assets/illustration_w-400.svg';
-import illustration_500 from '../../assets/illustration_w-500.svg';
+import illustration_200 from '../../assets/no-task/illustration_w-200.svg';
+import illustration_300 from '../../assets/no-task/illustration_w-300.svg';
+import illustration_400 from '../../assets/no-task/illustration_w-400.svg';
+import illustration_500 from '../../assets/no-task/illustration_w-500.svg';
 import { ModalContext } from '../../context/ModalContext';
 import { useContext } from 'react';
 

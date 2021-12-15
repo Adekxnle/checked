@@ -91,6 +91,7 @@ function NewTask() {
             />
           </svg>
         </a>
+        <div className='dummy-div'></div>
       </div>
     </div>
   );

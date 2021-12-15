@@ -33,10 +33,10 @@ function TaskContextProvider(props) {
     setTasks(newTasks);
   };
 
-  //const completedTasks = tasks.map((task) => );
+  const completedTasks = tasks.filter((task) => task.completed);
 
   return (
-    <TaskContext.Provider value={{ tasks, toggleTaskCompleted }}>
+    <TaskContext.Provider value={{ tasks, toggleTaskCompleted, completedTasks }}>
       {props.children}
     </TaskContext.Provider>
   );

@@ -9,7 +9,7 @@ function Header() {
   let location = useLocation();
 
   const { toggleIsOpen } = useContext(ModalContext);
-  const { tasks } = useContext(TaskContext);
+  const { tasks, completedTasks } = useContext(TaskContext);
 
   const currentDate = new Date();
 
@@ -74,7 +74,7 @@ function Header() {
                 <li>
                   <Link className='tabs' to='/completed-tasks'>
                     <div className='tab'>
-                      <h2>Completed Tasks (0)</h2>
+                      <h2>Completed Tasks ({completedTasks.length})</h2>
                       {location.pathname === '/completed-tasks' ? <div className='active' /> : ''}
                     </div>
                   </Link>
