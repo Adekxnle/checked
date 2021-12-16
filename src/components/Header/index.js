@@ -64,7 +64,7 @@ function Header() {
             <div className='links-container'>
               <ul>
                 <li>
-                  <Link className='tabs' to='/'>
+                  <Link className='tabs' to='/' tabIndex='1'>
                     <div className='tab'>
                       <h2> Tasks </h2>
                       {location.pathname === '/' ? <div className='active' /> : ''}
@@ -72,7 +72,7 @@ function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link className='tabs' to='/completed-tasks'>
+                  <Link className='tabs' to='/completed-tasks' tabIndex='2'>
                     <div className='tab'>
                       <h2>Completed Tasks ({completedTasks.length})</h2>
                       {location.pathname === '/completed-tasks' ? <div className='active' /> : ''}
@@ -84,7 +84,7 @@ function Header() {
           </div>
         </div>
         {tasks.length ? (
-          <button className='add-new-task-btn' onClick={toggleIsOpen}>
+          <button className='add-new-task-btn' onClick={toggleIsOpen} tabIndex='3'>
             <img src={plusIcon} alt='plus icon' />
             <span>add new task</span>
           </button>

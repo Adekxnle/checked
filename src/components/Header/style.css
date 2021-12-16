@@ -73,6 +73,16 @@ li .tabs {
   text-decoration: none;
 }
 
+li a:focus {
+  outline: none;
+}
+
+li a:focus-visible {
+  outline: 2px solid #b9bacb;
+  outline-style: dashed;
+  outline-offset: 4px;
+}
+
 .tab .active {
   height: 0.16em;
   background-color: var(--primary);

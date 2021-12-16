@@ -79,9 +79,15 @@ li.task-container {
   border: 0.125em solid #2e7d32;
 }
 
-/* label{
+label:focus {
+  outline: none;
+}
 
-} */
+label:focus-visible {
+  outline: 2px solid #b9bacb;
+  outline-style: dashed;
+  outline-offset: 4px;
+}
 
 label .task {
   height: max(var(--task-min-height), auto);

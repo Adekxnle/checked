@@ -15,7 +15,7 @@ function Tasks() {
 
   return tasks.length ? (
     <div className='tasks-page'>
-      <ol>
+      <ol tabIndex='4'>
         {tasks.map((task) => {
           return (
             <li className='task-container' key={task.id}>
