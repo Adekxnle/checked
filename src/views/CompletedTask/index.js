@@ -16,9 +16,9 @@ function CompletedTasks() {
 
   return (
     <div className='completed-task-page'>
-      <ol>
-        {completedTasks.length ? (
-          completedTasks.map((task) =>
+      {completedTasks.length ? (
+        <ol>
+          {completedTasks.map((task) =>
             task.completed ? (
               <li className='completed-task-container' key={task.id}>
                 <span className='checkbox-input'>
@@ -62,18 +62,18 @@ function CompletedTasks() {
             ) : (
               ''
             )
-          )
-        ) : (
-          <div style={{ alignSelf: 'center', justifySelf: 'center', alignItems: 'center' }}>
-            <img
-              src={illustration_300}
-              srcSet={`${illustration_200} 200w, ${illustration_300} 400w, ${illustration_300} 800w, ${illustration_400} 1100w, ${illustration_500} 1900w`}
-              alt='illustration of a your ass getting kicked by laziness'
-            />
-            <p>Laziness kicking your ass, you haven’t done any of your tasks.</p>
-          </div>
-        )}
-      </ol>
+          )}
+        </ol>
+      ) : (
+        <div className='completed-task-illustration'>
+          <img
+            src={illustration_300}
+            srcSet={`${illustration_200} 200w, ${illustration_300} 400w, ${illustration_300} 800w, ${illustration_400} 1100w, ${illustration_500} 1900w`}
+            alt='illustration of a your ass getting kicked by laziness'
+          />
+          <p>Laziness kicking your ass, you haven’t done any of your tasks.</p>
+        </div>
+      )}
     </div>
   );
 }

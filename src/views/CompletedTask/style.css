@@ -1,6 +1,7 @@
 .completed-task-page {
   padding-top: 4em;
   min-height: calc(100vh - 114px);
+  display: grid;
 }
 
 .completed-task-page ol {
@@ -15,6 +16,23 @@ li.completed-task-container {
   gap: 2rem;
   grid-gap: 2rem;
   padding-bottom: 4rem;
+}
+
+.completed-task-illustration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
+  padding-bottom: 2rem;
+}
+
+.completed-task-illustration p {
+  color: var(--off-white);
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.6;
 }
 
 @media screen and (max-width: 520px) {
