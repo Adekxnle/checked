@@ -13,9 +13,11 @@ function Tasks() {
     toggleTaskCompleted(task_id);
   };
 
+  const tabIndex = 3;
+
   return tasks.length ? (
     <div className='tasks-page'>
-      <ol tabIndex='4'>
+      <ol>
         {tasks.map((task) => {
           return (
             <li className='task-container' key={task.id}>
@@ -45,7 +47,7 @@ function Tasks() {
                   </svg>
                 </span>
               </span>
-              <label htmlFor={task.id}>
+              <label htmlFor={task.id} tabIndex={tabIndex + 1}>
                 <div className='task'>
                   <div className='badge' style={{ background: task.badge }} />
                   <p
