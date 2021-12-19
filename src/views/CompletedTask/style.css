@@ -25,7 +25,6 @@ li.completed-task-container {
   justify-content: center;
   justify-self: center;
   align-self: center;
-  padding-bottom: 2rem;
 }
 
 .completed-task-illustration p {

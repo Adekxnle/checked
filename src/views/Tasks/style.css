@@ -7,6 +7,7 @@
 .tasks-page {
   padding-top: 4em;
   min-height: calc(100vh - 114px);
+  display: grid;
 }
 
 .tasks-page ol {
