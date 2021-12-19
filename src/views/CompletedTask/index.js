@@ -65,13 +65,22 @@ function CompletedTasks() {
           )}
         </ol>
       ) : (
-        <div className='completed-task-illustration'>
+        <div
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: '#e6e6e6',
+            flexDirection: 'column',
+          }}>
           <img
             src={illustration_300}
             srcSet={`${illustration_200} 200w, ${illustration_300} 400w, ${illustration_300} 800w, ${illustration_400} 1100w, ${illustration_500} 1900w`}
             alt='illustration of a your ass getting kicked by laziness'
           />
-          <p>Laziness kicking your ass, you haven’t done any of your tasks.</p>
+          <p style={{ fontWeight: 400, textAlign: 'center', lineHeight: 1.6 }}>
+            Laziness kicking your ass, you haven’t done any of your tasks.
+          </p>
         </div>
       )}
     </div>
