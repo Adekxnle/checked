@@ -2,11 +2,9 @@ import './style.css';
 import { useContext } from 'react';
 import { TaskContext } from '../../context/TaskContext';
 import { ModalContext } from '../../context/ModalContext';
-import NoTask from '../NoTask/index';
-import illustration_200 from '../../assets/tasks/illustration_w-200.svg';
-import illustration_300 from '../../assets/tasks/illustration_w-300.svg';
-import illustration_400 from '../../assets/tasks/illustration_w-400.svg';
-import illustration_500 from '../../assets/tasks/illustration_w-500.svg';
+import IllustrationPage from '../../components/IllustrationPageTemplate';
+import illustration_relaxing from '../../assets/illustration_relaxing.svg';
+import illustration_rejoicing from '../../assets/illustration_rejoicing.svg';
 
 function Tasks() {
   const { tasks, toggleTaskCompleted } = useContext(TaskContext);
@@ -18,7 +16,7 @@ function Tasks() {
   };
 
   return tasks.length ? (
-    <div className='tasks-page'>
+    <div className='pages tasks-page'>
       {tasks.some((task) => task.completed === false) ? (
         <ol>
           {tasks.map((task) => {
@@ -66,23 +64,12 @@ function Tasks() {
           })}
         </ol>
       ) : (
-        <div
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#e6e6e6',
-            flexDirection: 'column',
-          }}>
-          <img
-            src={illustration_300}
-            srcSet={`${illustration_200} 200w, ${illustration_300} 400w, ${illustration_300} 800w, ${illustration_400} 1100w, ${illustration_500} 1900w`}
-            alt='illustration of a joyous person'
-          />
-          <p style={{ fontWeight: 400, textAlign: 'center', lineHeight: 1.6 }}>
-            Welldone!. you've finished all of your tasks.
-          </p>
-        </div>
+        <IllustrationPage
+          illustration={illustration_rejoicing}
+          altText={'illustration of a person rejoicing'}
+          description={`Welldone!. You've completed all your tasks.`}
+          button={false}
+        />
       )}
       <a href='/#' className='add-new-task-btn-sm' onClick={toggleIsOpen}>
         <svg
@@ -96,7 +83,12 @@ function Tasks() {
       </a>
     </div>
   ) : (
-    <NoTask />
+    <IllustrationPage
+      illustration={illustration_relaxing}
+      altText={'illustration of a person relaxing'}
+      description={`You don't have any tasks set for today.`}
+      button={true}
+    />
   );
 }
 

@@ -1,10 +1,8 @@
 import './style.css';
 import { useContext } from 'react';
 import { TaskContext } from '../../context/TaskContext';
-import illustration_200 from '../../assets/completed/illustration_w-200.svg';
-import illustration_300 from '../../assets/completed/illustration_w-300.svg';
-import illustration_400 from '../../assets/completed/illustration_w-400.svg';
-import illustration_500 from '../../assets/completed/illustration_w-500.svg';
+import IllustrationPage from '../../components/IllustrationPageTemplate';
+import illustration_lazy from '../../assets/illustration_lazy.svg';
 
 function CompletedTasks() {
   const { toggleTaskCompleted, completedTasks } = useContext(TaskContext);
@@ -15,7 +13,7 @@ function CompletedTasks() {
   };
 
   return (
-    <div className='completed-task-page'>
+    <div className='pages completed-task-page'>
       {completedTasks.length ? (
         <ol>
           {completedTasks.map((task) =>
@@ -65,23 +63,12 @@ function CompletedTasks() {
           )}
         </ol>
       ) : (
-        <div
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#e6e6e6',
-            flexDirection: 'column',
-          }}>
-          <img
-            src={illustration_300}
-            srcSet={`${illustration_200} 200w, ${illustration_300} 400w, ${illustration_300} 800w, ${illustration_400} 1100w, ${illustration_500} 1900w`}
-            alt='illustration of a your ass getting kicked by laziness'
-          />
-          <p style={{ fontWeight: 400, textAlign: 'center', lineHeight: 1.6 }}>
-            Laziness kicking your ass, you haven’t done any of your tasks.
-          </p>
-        </div>
+        <IllustrationPage
+          illustration={illustration_lazy}
+          altText={'illustration of a person fighting'}
+          description={`Laziness wooping your ass, you haven't done any of your tasks.`}
+          button={false}
+        />
       )}
     </div>
   );

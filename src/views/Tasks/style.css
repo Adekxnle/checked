@@ -5,8 +5,6 @@
 }
 
 .tasks-page {
-  padding-top: 4em;
-  min-height: calc(100vh - 114px);
   display: grid;
 }
 
@@ -22,6 +20,10 @@ li.task-container {
   gap: 2rem;
   grid-gap: 2rem;
   padding-bottom: 4rem;
+}
+
+li.task-container:first-child {
+  margin-top: 4em;
 }
 
 .task-container:not(:last-child)::after {

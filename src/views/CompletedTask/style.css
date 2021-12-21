@@ -1,6 +1,4 @@
 .completed-task-page {
-  padding-top: 4em;
-  min-height: calc(100vh - 114px);
   display: grid;
 }
 
@@ -8,6 +6,10 @@
   margin: 0;
   padding: 0;
   width: min(70ch, 100%);
+}
+
+li.completed-task-container:first-child {
+  margin-top: 4em;
 }
 
 li.completed-task-container {

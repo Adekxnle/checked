@@ -72,12 +72,18 @@ function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link className='tabs' to='/completed-tasks' tabIndex='2'>
+                  {tasks.length ? (
+                    <Link className='tabs' to='/completed-tasks' tabIndex='2'>
+                      <div className='tab'>
+                        <h2>Completed Tasks ({completedTasks.length})</h2>
+                        {location.pathname === '/completed-tasks' ? <div className='active' /> : ''}
+                      </div>
+                    </Link>
+                  ) : (
                     <div className='tab'>
-                      <h2>Completed Tasks ({completedTasks.length})</h2>
-                      {location.pathname === '/completed-tasks' ? <div className='active' /> : ''}
+                      <h2 className='disabled'>Completed Tasks ({completedTasks.length})</h2>
                     </div>
-                  </Link>
+                  )}
                 </li>
               </ul>
             </div>

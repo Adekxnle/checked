@@ -69,6 +69,11 @@ li .tab h2 {
   font-size: var(--h2);
 }
 
+li .tab h2.disabled {
+  color: #737373;
+  cursor: pointer;
+}
+
 li a.tabs {
   text-decoration: none;
 }
