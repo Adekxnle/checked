@@ -1,18 +1,32 @@
 import './style.css';
 import Checked from '../../assets/checked-white.svg';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { ModalContext } from '../../context/ModalContext';
+import { TaskContext } from '../../context/TaskContext';
 import { v4 as uuidv4 } from 'uuid';
 
 function NewTask() {
   const { isOpen, toggleIsOpen } = useContext(ModalContext);
+  const { addNewTask } = useContext(TaskContext);
+
+  const [title, setTitle] = useState('');
+  const [badge, setBadge] = useState('');
+
+  const handleAddNewTask = () => {
+    const newTask = { title, badge };
+    if (newTask.title !== '' && newTask.badge !== '') {
+      addNewTask(newTask);
+    }
+  };
+
+  const handleSetBadge = (e) => (e.target.checked ? setBadge(e.target.value) : '');
 
   const colours = [
-    { id: uuidv4(), colour: '#ff8906' },
-    { id: uuidv4(), colour: '#7f5af0' },
-    { id: uuidv4(), colour: '#9656a1' },
-    { id: uuidv4(), colour: '#f25f4c' },
-    { id: uuidv4(), colour: '#2cb67d' },
+    { id: uuidv4(), colour: 'rgb(255, 137, 6)' },
+    { id: uuidv4(), colour: 'rgb(127, 90, 240)' },
+    { id: uuidv4(), colour: 'rgb(150, 86, 161)' },
+    { id: uuidv4(), colour: 'rgb(242, 95, 76)' },
+    { id: uuidv4(), colour: 'rgb(44, 182, 125)' },
   ];
 
   return (
@@ -34,7 +48,7 @@ function NewTask() {
             </svg>
             <h1>New task</h1>
           </div>
-          <button className='btn-finished'>
+          <button className='btn-finished' onClick={handleAddNewTask}>
             <img src={Checked} alt='checked icon' />
             <span>done</span>
           </button>
@@ -42,7 +56,13 @@ function NewTask() {
         <div className='new-task-page-content'>
           <div className='input-title'>
             <label htmlFor='title'>Title</label>
-            <textarea type='text' id='title' maxLength='150' />
+            <textarea
+              value={title}
+              type='text'
+              id='title'
+              maxLength='150'
+              onChange={(e) => setTitle(e.target.value)}
+            />
           </div>
           <div className='color-badge'>
             <p>Color badge</p>
@@ -53,7 +73,13 @@ function NewTask() {
                     <li key={colour.id}>
                       <label className='badge'>
                         <span className='badge-input'>
-                          <input type='radio' name='badge' />
+                          <input
+                            id={colour.id}
+                            value={colour.colour}
+                            type='radio'
+                            name='badge'
+                            onChange={(e) => handleSetBadge(e)}
+                          />
                           <span
                             className='badge-control'
                             style={{ backgroundColor: colour.colour }}>

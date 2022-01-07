@@ -35,8 +35,16 @@ function TaskContextProvider(props) {
 
   const completedTasks = tasks.filter((task) => task.completed);
 
+  const addNewTask = (newTask) => {
+    setTasks([
+      { id: uuidv4(), title: newTask.title, badge: newTask.badge, completed: false },
+      ...tasks,
+    ]);
+    console.log(tasks);
+  };
+
   return (
-    <TaskContext.Provider value={{ tasks, toggleTaskCompleted, completedTasks }}>
+    <TaskContext.Provider value={{ tasks, toggleTaskCompleted, completedTasks, addNewTask }}>
       {props.children}
     </TaskContext.Provider>
   );
