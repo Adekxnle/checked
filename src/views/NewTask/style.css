@@ -161,14 +161,6 @@ textarea[id='title']:focus {
   transition: background 0s;
 }
 
-/* .dummy-div {
-  width: 100%;
-  height: 35vh;
-  border: 1px solid #ffff;
-  visibility: hidden;
-} */
-/*--media queries--*/
-
 @media screen and (max-width: 950px) {
   .new-task-page {
     width: 100vw;
