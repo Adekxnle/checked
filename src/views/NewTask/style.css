@@ -72,20 +72,26 @@
   background: none;
   border: 1.5px solid var(--off-white);
   border-radius: 8px;
-  outline: none;
   color: var(--off-white);
   font-family: inherit;
   font-size: max(16px, var(--font-size));
   line-height: 1.4;
   padding: 0.7em 0.6em;
-  transition: 180ms box-shadow ease-in-out;
+  transition: 160ms outline ease-in-out;
   resize: vertical;
 }
 
 textarea[id='title']:focus {
-  border-color: hsl(234.8, 15%, 70%);
+  outline: none;
+  /* border-color: hsl(234.8, 15%, 70%);
   box-shadow: 0 0 0 2px hsla(234.8, 15%, calc(70% + 20%), 0.8);
-  outline: 2px solid transparent;
+  outline: 2px solid transparent; */
+}
+
+textarea[id='title']:focus-visible {
+  outline: 2px solid #b9bacb;
+  outline-style: dashed;
+  outline-offset: 4px;
 }
 
 .color-badge {
