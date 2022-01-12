@@ -119,13 +119,15 @@ textarea[id='title']:focus {
 }
 
 .badge-input input[type='radio']::before {
-  content: '';
-  width: 0.65em;
-  height: 0.65em;
+  content: url('../../assets/checked-white.svg');
+  width: 2.4em;
+  height: 2.4em;
+  display: grid;
+  align-content: center;
+  justify-content: center;
   transform: scale(0);
   transition: 120ms transform ease-in-out;
   transform-origin: bottom left;
-  color: var(--off-white);
 }
 
 .badge-input input[type='radio']:checked::before {
