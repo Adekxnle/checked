@@ -5,20 +5,6 @@ export const TaskContext = createContext();
 
 function TaskContextProvider(props) {
   const [tasks, setTasks] = useState([
-    {
-      id: uuidv4(),
-      title:
-        'wash them plates!wash them plates!wash them plates!wash them plates!wash them plates!',
-      badge: '#7f5af0',
-      completed: false,
-    },
-    {
-      id: uuidv4(),
-      title:
-        'feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs! feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!feed the dogs!',
-      badge: '#ff8906',
-      completed: false,
-    },
     { id: uuidv4(), title: 'Read your books!', badge: '#2cb67d', completed: false },
   ]);
 

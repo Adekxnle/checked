@@ -32,7 +32,6 @@ function NewTask() {
           <div className='new-task-header'>
             <div className='new-task-header-left'>
               <svg
-                tabIndex={1}
                 onClick={toggleIsOpen}
                 width='14'
                 height='14'
@@ -46,7 +45,7 @@ function NewTask() {
               </svg>
               <h1>New task</h1>
             </div>
-            <button type='submit' className='btn-finished' tabIndex={4}>
+            <button type='submit' className='btn-finished'>
               <img src={Checked} alt='checked icon' />
               <span>done</span>
             </button>
@@ -67,7 +66,7 @@ function NewTask() {
               <p>Color badge</p>
               <div className='colors'>
                 <ul>
-                  <li tabIndex={3}>
+                  <li>
                     <label className='badge'>
                       <span className='badge-input'>
                         <input
