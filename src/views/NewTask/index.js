@@ -21,17 +21,10 @@ function NewTask() {
     }
 
     setTitle('');
+    setBadge('');
   };
 
   const handleSetBadge = (e) => (e.target.checked ? setBadge(e.target.value) : '');
-
-  const colours = [
-    { id: uuidv4(), colour: 'rgb(255, 137, 6)' },
-    { id: uuidv4(), colour: 'rgb(127, 90, 240)' },
-    { id: uuidv4(), colour: 'rgb(150, 86, 161)' },
-    { id: uuidv4(), colour: 'rgb(242, 95, 76)' },
-    { id: uuidv4(), colour: 'rgb(44, 182, 125)' },
-  ];
 
   return (
     <div className='new-task-page-wrapper' style={{ display: isOpen ? 'grid' : 'none' }}>
@@ -73,24 +66,76 @@ function NewTask() {
               <p>Color badge</p>
               <div className='colors'>
                 <ul>
-                  {colours.map((colour) => {
-                    return (
-                      <li key={colour.id}>
-                        <label className='badge'>
-                          <span className='badge-input'>
-                            <input
-                              id={colour.id}
-                              value={colour.colour}
-                              type='radio'
-                              name='badge'
-                              onChange={(e) => handleSetBadge(e)}
-                              style={{ backgroundColor: colour.colour }}
-                            />
-                          </span>
-                        </label>
-                      </li>
-                    );
-                  })}
+                  <li>
+                    <label className='badge'>
+                      <span className='badge-input'>
+                        <input
+                          id={uuidv4()}
+                          value='rgb(255, 137, 6)'
+                          type='radio'
+                          name='badge'
+                          onChange={(e) => handleSetBadge(e)}
+                          style={{ backgroundColor: 'rgb(255, 137, 6)' }}
+                        />
+                      </span>
+                    </label>
+                  </li>
+                  <li>
+                    <label className='badge'>
+                      <span className='badge-input'>
+                        <input
+                          id={uuidv4()}
+                          value='rgb(127, 90, 240)'
+                          type='radio'
+                          name='badge'
+                          onChange={(e) => handleSetBadge(e)}
+                          style={{ backgroundColor: 'rgb(127, 90, 240)' }}
+                        />
+                      </span>
+                    </label>
+                  </li>
+                  <li>
+                    <label className='badge'>
+                      <span className='badge-input'>
+                        <input
+                          id={uuidv4()}
+                          value='rgb(150, 86, 161)'
+                          type='radio'
+                          name='badge'
+                          onChange={(e) => handleSetBadge(e)}
+                          style={{ backgroundColor: 'rgb(150, 86, 161)' }}
+                        />
+                      </span>
+                    </label>
+                  </li>
+                  <li>
+                    <label className='badge'>
+                      <span className='badge-input'>
+                        <input
+                          id={uuidv4()}
+                          value='rgb(242, 95, 76)'
+                          type='radio'
+                          name='badge'
+                          onChange={(e) => handleSetBadge(e)}
+                          style={{ backgroundColor: 'rgb(242, 95, 76)' }}
+                        />
+                      </span>
+                    </label>
+                  </li>
+                  <li>
+                    <label className='badge'>
+                      <span className='badge-input'>
+                        <input
+                          id={uuidv4()}
+                          value='rgb(44, 182, 125)'
+                          type='radio'
+                          name='badge'
+                          onChange={(e) => handleSetBadge(e)}
+                          style={{ backgroundColor: 'rgb(44, 182, 125)' }}
+                        />
+                      </span>
+                    </label>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -114,5 +159,4 @@ function NewTask() {
     </div>
   );
 }
-
 export default NewTask;
