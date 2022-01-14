@@ -21,7 +21,6 @@ function NewTask() {
     }
 
     setTitle('');
-    setBadge('');
   };
 
   const handleSetBadge = (e) => (e.target.checked ? setBadge(e.target.value) : '');
@@ -33,6 +32,7 @@ function NewTask() {
           <div className='new-task-header'>
             <div className='new-task-header-left'>
               <svg
+                tabIndex={1}
                 onClick={toggleIsOpen}
                 width='14'
                 height='14'
@@ -46,7 +46,7 @@ function NewTask() {
               </svg>
               <h1>New task</h1>
             </div>
-            <button type='submit' className='btn-finished'>
+            <button type='submit' className='btn-finished' tabIndex={4}>
               <img src={Checked} alt='checked icon' />
               <span>done</span>
             </button>
@@ -55,6 +55,7 @@ function NewTask() {
             <div className='input-title'>
               <label htmlFor='title'>Title</label>
               <textarea
+                tabIndex={2}
                 value={title}
                 type='text'
                 id='title'
@@ -66,7 +67,7 @@ function NewTask() {
               <p>Color badge</p>
               <div className='colors'>
                 <ul>
-                  <li>
+                  <li tabIndex={3}>
                     <label className='badge'>
                       <span className='badge-input'>
                         <input
@@ -154,7 +155,6 @@ function NewTask() {
             </svg>
           </a>
         </form>
-        {/* <div className='dummy-div'></div> */}
       </div>
     </div>
   );
