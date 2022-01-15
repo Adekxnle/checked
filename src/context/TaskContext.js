@@ -4,9 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 export const TaskContext = createContext();
 
 function TaskContextProvider(props) {
-  const [tasks, setTasks] = useState([
-    { id: uuidv4(), title: 'Read your books!', badge: '#2cb67d', completed: false },
-  ]);
+  const [tasks, setTasks] = useState([]);
 
   const toggleTaskCompleted = (task_id) => {
     const newTasks = tasks.map((task) => {
