@@ -34,6 +34,12 @@
   cursor: pointer;
 }
 
+.new-task-header svg:focus {
+  outline: 2px solid #b9bacb;
+  outline-style: dashed;
+  outline-offset: 4px;
+}
+
 .new-task-header-left h1 {
   margin-left: 1.5rem;
   font-weight: bold;

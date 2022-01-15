@@ -54,7 +54,6 @@ function NewTask() {
             <div className='input-title'>
               <label htmlFor='title'>Title</label>
               <textarea
-                tabIndex={2}
                 value={title}
                 type='text'
                 id='title'

@@ -10,13 +10,19 @@ function Tasks() {
   const { tasks, toggleTaskCompleted } = useContext(TaskContext);
   const { toggleIsOpen } = useContext(ModalContext);
 
+  // this function toggles the completed attribute of the task from (true - false) / (false - true)
   const handleUpdateChecked = (e, task_id) => {
-    //console.log(e.target);
     toggleTaskCompleted(task_id);
   };
 
+  // length function checks for task. if there are none it loads the create new illustration page
+
   return tasks.length ? (
     <div className='pages tasks-page'>
+      {/* 
+       The some function checks for an uncompleted task before rendering anything on the page. if all tasks are completed it renders the illustration page with the welldone message 
+    */}
+
       {tasks.some((task) => task.completed === false) ? (
         <ol>
           {tasks.map((task) => {
@@ -48,7 +54,7 @@ function Tasks() {
                     </svg>
                   </span>
                 </span>
-                <label htmlFor={task.id} tabIndex='4'>
+                <label htmlFor={task.id}>
                   <div className='task'>
                     <div className='badge' style={{ background: task.badge }} />
                     <p
@@ -64,6 +70,7 @@ function Tasks() {
           })}
         </ol>
       ) : (
+        // illustration page with welldone message
         <IllustrationPage
           illustration={illustration_rejoicing}
           altText={'illustration of a person rejoicing'}
@@ -83,6 +90,7 @@ function Tasks() {
       </a>
     </div>
   ) : (
+    // illustration page with create new task message
     <IllustrationPage
       illustration={illustration_relaxing}
       altText={'illustration of a person relaxing'}
