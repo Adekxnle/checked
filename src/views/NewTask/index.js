@@ -15,6 +15,8 @@ function NewTask() {
   const handleAddNewTask = (e) => {
     e.preventDefault();
 
+    console.log(e);
+
     const newTask = { title, badge };
     if (newTask.title !== '' && newTask.badge !== '') {
       addNewTask(newTask);
@@ -139,7 +141,7 @@ function NewTask() {
               </div>
             </div>
           </div>
-          <a href='/#' className='btn-finished-sm'>
+          <button type='submit' className='btn-finished-sm' onClick={toggleIsOpen}>
             <svg
               width='18'
               height='14'
@@ -151,7 +153,7 @@ function NewTask() {
                 fill='#e6e6e6'
               />
             </svg>
-          </a>
+          </button>
         </form>
       </div>
     </div>

@@ -157,7 +157,7 @@ textarea[id='title']:focus-visible {
   bottom: 5vh;
   right: 5vw;
   height: 3rem;
-  width: 3rem;
+  min-width: 3rem;
   background-color: var(--primary);
   background-position: center;
   color: var(--white);
