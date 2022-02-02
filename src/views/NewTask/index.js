@@ -15,8 +15,6 @@ function NewTask() {
   const handleAddNewTask = (e) => {
     e.preventDefault();
 
-    console.log(e);
-
     const newTask = { title, badge };
     if (newTask.title !== '' && newTask.badge !== '') {
       addNewTask(newTask);
@@ -141,7 +139,7 @@ function NewTask() {
               </div>
             </div>
           </div>
-          <button type='submit' className='btn-finished-sm' onClick={toggleIsOpen}>
+          <button type='submit' className='btn-finished-sm' onClick={(e) => handleAddNewTask(e)}>
             <svg
               width='18'
               height='14'
