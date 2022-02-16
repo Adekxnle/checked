@@ -28,15 +28,12 @@ function TaskContextProvider(props) {
   // filter completed tasks into temporary array
   const completedTasks = tasks.filter((task) => task.completed);
 
-  console.log(tasks);
-
   // add new tasks
   const addNewTask = (newTask) => {
     setTasks([
       { id: uuidv4(), title: newTask.title, badge: newTask.badge, completed: false },
       ...tasks,
     ]);
-    console.log(tasks);
   };
 
   // reset tasks

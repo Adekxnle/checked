@@ -13,10 +13,6 @@ function Header() {
 
   const currentDate = new Date();
 
-  //const [month, day, year] = [currentDate, currentDate, currentDate.getFullYear()];
-
-  //console.log(currentDate.toDateString());
-
   return (
     <div className='header'>
       <div className='header-top'>
