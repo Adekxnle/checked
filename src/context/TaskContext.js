@@ -36,13 +36,14 @@ function TaskContextProvider(props) {
     ]);
   };
 
-  // reset tasks
-  // const resetTasks = () => {
-  //   setTasks([]);
-  // };
+  //reset tasks
+  const resetTasks = () => {
+    setTasks([]);
+  };
 
   return (
-    <TaskContext.Provider value={{ tasks, toggleTaskCompleted, completedTasks, addNewTask }}>
+    <TaskContext.Provider
+      value={{ tasks, toggleTaskCompleted, completedTasks, addNewTask, resetTasks }}>
       {props.children}
     </TaskContext.Provider>
   );
