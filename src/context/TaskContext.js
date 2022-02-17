@@ -9,9 +9,18 @@ function TaskContextProvider(props) {
     return localData ? JSON.parse(localData) : [];
   });
 
+  const currentDate = new Date();
+  const day = useState(currentDate.getDay());
+
+  // persist state with local storage
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }, [tasks]);
+
+  // reset tasks daily base
+  useEffect(() => {
+    setTasks([]);
+  }, [day]);
 
   // toggle task completed attribute ({completed: true/false})
   const toggleTaskCompleted = (task_id) => {
@@ -36,14 +45,8 @@ function TaskContextProvider(props) {
     ]);
   };
 
-  //reset tasks
-  const resetTasks = () => {
-    setTasks([]);
-  };
-
   return (
-    <TaskContext.Provider
-      value={{ tasks, toggleTaskCompleted, completedTasks, addNewTask, resetTasks }}>
+    <TaskContext.Provider value={{ tasks, toggleTaskCompleted, completedTasks, addNewTask }}>
       {props.children}
     </TaskContext.Provider>
   );
