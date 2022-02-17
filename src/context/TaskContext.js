@@ -10,7 +10,7 @@ function TaskContextProvider(props) {
   });
 
   const currentDate = new Date();
-  const day = useState(currentDate.getDay());
+  const [day] = useState(currentDate.getDay());
 
   // persist state with local storage
   useEffect(() => {
