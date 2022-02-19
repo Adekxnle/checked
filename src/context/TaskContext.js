@@ -10,14 +10,18 @@ function TaskContextProvider(props) {
   });
 
   const currentDate = new Date();
-  const [day] = useState(currentDate.getDay());
+  const [day] = useState(() => {
+    const dayData = localStorage.getItem('day');
+    return dayData ? JSON.parse(dayData) : currentDate.getDay();
+  });
 
   // persist state with local storage
   useEffect(() => {
+    localStorage.setItem('day', JSON.stringify(day));
     localStorage.setItem('tasks', JSON.stringify(tasks));
-  }, [tasks]);
+  }, [tasks, day]);
 
-  // reset tasks daily base
+  // reset tasks daily
   useEffect(() => {
     setTasks([]);
   }, [day]);
