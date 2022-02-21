@@ -10,21 +10,33 @@ function TaskContextProvider(props) {
   });
 
   const currentDate = new Date();
+  const daysOfTheWeek = [
+    'sunday',
+    'monday',
+    'tuesday',
+    'wednesday',
+    'thursday',
+    'friday',
+    'saturday',
+  ];
+  const presentDay = daysOfTheWeek[currentDate.getDay()];
+
   const [day] = useState(() => {
     const dayData = localStorage.getItem('day');
-    return dayData ? JSON.parse(dayData) : currentDate.getDay();
+    return dayData ? JSON.parse(dayData) : presentDay;
   });
 
   // persist state with local storage
   useEffect(() => {
-    localStorage.setItem('day', JSON.stringify(day));
     localStorage.setItem('tasks', JSON.stringify(tasks));
-  }, [tasks, day]);
+  }, [tasks]);
 
   // reset tasks daily
   useEffect(() => {
-    setTasks([]);
-  }, [day]);
+    localStorage.setItem('day', JSON.stringify(day));
+
+    if (day !== presentDay) setTasks([]);
+  }, [day, presentDay]);
 
   // toggle task completed attribute ({completed: true/false})
   const toggleTaskCompleted = (task_id) => {
