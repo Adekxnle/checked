@@ -21,7 +21,7 @@ function TaskContextProvider(props) {
   ];
   const presentDay = daysOfTheWeek[currentDate.getDay()];
 
-  const [day] = useState(() => {
+  const [day, setDay] = useState(() => {
     const dayData = localStorage.getItem('day');
     return dayData ? JSON.parse(dayData) : presentDay;
   });
@@ -35,7 +35,10 @@ function TaskContextProvider(props) {
   useEffect(() => {
     localStorage.setItem('day', JSON.stringify(day));
 
-    if (day !== presentDay) setTasks([]);
+    if (day !== presentDay) {
+      setTasks([]);
+      setDay(presentDay);
+    }
   }, [day, presentDay]);
 
   // toggle task completed attribute ({completed: true/false})
