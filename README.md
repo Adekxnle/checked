@@ -1,5 +1,5 @@
 # checked
-A daily task managing web application built with react.js
+A daily-task managing web application built with react.js
 
 ## Build
 
