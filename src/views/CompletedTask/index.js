@@ -1,5 +1,5 @@
 import './style.css';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { TaskContext } from '../../context/TaskContext';
 import IllustrationPage from '../../components/IllustrationPageTemplate';
 import illustration_lazy from '../../assets/illustration_lazy.svg';

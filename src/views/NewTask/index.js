@@ -1,6 +1,6 @@
 import './style.css';
 import Checked from '../../assets/checked-white.svg';
-import { useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { ModalContext } from '../../context/ModalContext';
 import { TaskContext } from '../../context/TaskContext';
 import { v4 as uuidv4 } from 'uuid';

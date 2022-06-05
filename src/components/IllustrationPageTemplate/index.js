@@ -1,6 +1,6 @@
 import './style.css';
 import { ModalContext } from '../../context/ModalContext';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 
 function IllustrationPage({ illustration, altText, description, button }) {
   const { toggleIsOpen } = useContext(ModalContext);

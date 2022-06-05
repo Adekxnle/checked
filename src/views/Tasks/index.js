@@ -1,5 +1,5 @@
 import './style.css';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { TaskContext } from '../../context/TaskContext';
 import { ModalContext } from '../../context/ModalContext';
 import IllustrationPage from '../../components/IllustrationPageTemplate';
@@ -19,8 +19,8 @@ function Tasks() {
 
   return tasks.length ? (
     <div className='pages tasks-page'>
-      {/* 
-       The some function checks for an uncompleted task before rendering anything on the page. if all tasks are completed it renders the illustration page with the welldone message 
+      {/*
+       The some function checks for an uncompleted task before rendering anything on the page. if all tasks are completed it renders the illustration page with the welldone message
     */}
 
       {tasks.some((task) => task.completed === false) ? (

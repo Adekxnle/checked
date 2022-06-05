@@ -1,7 +1,7 @@
 import './style.css';
 import plusIcon from '../../assets/plus.svg';
 import { Link, useLocation } from 'react-router-dom';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { ModalContext } from '../../context/ModalContext';
 import { TaskContext } from '../../context/TaskContext';
 
