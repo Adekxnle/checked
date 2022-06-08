@@ -59,6 +59,7 @@
 
 .tab {
   display: block;
+  overflow: hidden;
 }
 
 li .tab h2 {
@@ -92,6 +93,17 @@ li a.tabs:focus-visible {
   height: 0.16em;
   background-color: var(--primary);
   border-radius: 4px;
+  transition: transform;
+  animation: pop-in 0.16s ease-in-out;
+}
+
+@keyframes pop-in {
+  from {
+    transform: scale(0.83);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /*--media queries--*/
