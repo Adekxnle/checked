@@ -58,12 +58,12 @@ function Header() {
               </svg>
             </div>
             <div className='links-container'>
-              <ul>
+              {/* <ul>
                 <li>
                   <Link className='tabs' to='/' tabIndex='1'>
                     <div className='tab'>
                       <h2> Tasks </h2>
-                      {location.pathname === '/' ? <div className='active' /> : ''}
+                      {location.pathname === '/' ? <div className='active slide-in' /> : ''}
                     </div>
                   </Link>
                 </li>
@@ -72,7 +72,13 @@ function Header() {
                     <Link className='tabs' to='/completed-tasks' tabIndex='2'>
                       <div className='tab'>
                         <h2>Completed Tasks ({completedTasks.length})</h2>
-                        {location.pathname === '/completed-tasks' ? <div className='active' /> : ''}
+                        <div
+                          className={`${
+                            location.pathname === '/completed-tasks'
+                              ? 'active slide-in'
+                              : 'un-active slide-out'
+                          }`}
+                        />
                       </div>
                     </Link>
                   ) : (
@@ -81,7 +87,7 @@ function Header() {
                     </div>
                   )}
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>
