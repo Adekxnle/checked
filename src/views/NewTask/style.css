@@ -1,13 +1,22 @@
 .new-task-page-wrapper {
   width: 100%;
   height: 100%;
-  background-color: RGBA(102, 102, 102, 0.2);
+  background-color: RGBA(102, 102, 102, 0.3);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 3;
   overscroll-behavior-y: contain;
   overflow-y: auto;
+  transition: background-color;
+  animation: fade-in 0.28s ease-out;
+  overflow-x: hidden;
+}
+
+@keyframes fade-in {
+  from {
+    background-color: RGBA(102, 102, 102, 0);
+  }
 }
 
 .new-task-page {
@@ -16,6 +25,17 @@
   background-color: var(--tertiary);
   padding: 1em 2em;
   justify-self: flex-end;
+  transition: transform;
+  animation: slide-in-right 0.34s ease-out;
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: translateX(15%);
+  }
+  to {
+    transform: translateX(0);
+  }
 }
 
 .new-task-page .new-task-header {
