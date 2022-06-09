@@ -20,6 +20,19 @@ li.task-container {
   gap: 2rem;
   grid-gap: 2rem;
   padding-bottom: 4rem;
+  transition: transform, opacity;
+  animation: fade-in-bottom 0.34s ease-in-out;
+}
+
+@keyframes fade-in-bottom {
+  from {
+    opacity: 0.82;
+    transform: translateY(7%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 li.task-container:first-child {
@@ -100,6 +113,8 @@ label .task {
   border-radius: 8px;
   cursor: pointer;
   color: var(--off-white);
+  transition: transform, opacity;
+  animation: fade-in 0.57s ease-out;
 }
 
 .task .badge {
