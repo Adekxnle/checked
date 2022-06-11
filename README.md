@@ -1,4 +1,4 @@
-# checked
+# checked  https://glittery-crostata-086eac.netlify.app/
 A daily-task managing web application built with react.js
 
 ## Build
