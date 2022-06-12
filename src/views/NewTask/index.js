@@ -139,7 +139,13 @@ function NewTask() {
               </div>
             </div>
           </div>
-          <button type='submit' className='btn-finished-sm' onClick={(e) => handleAddNewTask(e)}>
+          <button
+            type='submit'
+            className='btn-finished-sm'
+            onClick={(e) => {
+              handleAddNewTask(e);
+              toggleIsOpen();
+            }}>
             <svg
               width='18'
               height='14'
