@@ -143,8 +143,10 @@ function NewTask() {
             type='submit'
             className='btn-finished-sm'
             onClick={(e) => {
-              handleAddNewTask(e);
-              toggleIsOpen();
+              if (title !== '' && badge !== '') {
+                handleAddNewTask(e);
+                toggleIsOpen();
+              }
             }}>
             <svg
               width='18'
