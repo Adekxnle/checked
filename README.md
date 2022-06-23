@@ -1,6 +1,5 @@
 # checked
-A daily-task managing web application built with react.js
-https://glittery-crostata-086eac.netlify.app/
+a daily-task managing web application
 
 ## Build
 
